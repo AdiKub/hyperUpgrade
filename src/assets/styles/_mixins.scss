@@ -11,3 +11,10 @@
     justify-content: center;
     align-items: center;
 }
+
+@mixin componentStyle {
+    width: 100%;
+    height: auto;
+    @include center;
+    background-color: $genBackCol;
+}

@@ -2,14 +2,8 @@
 @import '../../assets/styles/mixins';
 
 .header {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 50px;
-    background-color: $genBackCol;
-    color: $genTextCol;
-
-
+    @include componentStyle;
+    
     &__title {
         text-transform: uppercase;
         font-size: 150%;
@@ -21,6 +15,7 @@
     }
 
     &-wrapper {
+        height: 50px;
         display: flex;
         justify-content: space-between;
         align-items: center;
