@@ -1,0 +1,51 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixins';
+
+.header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    background-color: $genBackCol;
+    color: $genTextCol;
+
+
+    &__title {
+        text-transform: uppercase;
+        font-size: 150%;
+        color: $genRed; 
+
+        &__span {
+            color: $genTextCol;
+        }
+    }
+
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-list {
+        width: auto;
+        display: flex;
+        @include flexCenter;
+
+        &_link {
+            text-transform: uppercase;
+            margin-left: 10px;
+            font-size: 80%; 
+            color: $genTextCol;
+
+            &_login {
+                font-weight: 800;
+                @include center;
+                width: 70px;
+                height: 30px;
+                border: 1px solid $genRed;
+                border-radius: 5px;
+            }
+        }
+    }
+
+}

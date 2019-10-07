@@ -1,0 +1,13 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixins';
+
+.main {
+    width: 100%;
+    @include center;
+    background-color: $genBackCol;
+    height: auto;
+
+    &-wrapper {
+        @include center;
+    }
+}
