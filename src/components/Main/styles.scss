@@ -8,6 +8,36 @@
     height: auto;
 
     &-wrapper {
+        padding: 20px 0;
         @include center;
+    }
+
+    &__title {
+        text-transform: capitalize;
+        font-size: 150%;
+        color: $genTextCol; 
+    }
+    &-image-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    &__image {
+        height: 90%;
+        width: 90%;
+        object-fit: cover;
+
+    }
+    &-text-wrapper {
+        @include center;
+        height: 100%;
+        width: 250px;
+        position: absolute;
+        left: 0;
+    }
+    &__text {
+        color: $genTextCol;
     }
 }
