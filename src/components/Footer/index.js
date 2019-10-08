@@ -3,14 +3,14 @@ import React, { useState } from 'react';
 import './styles.scss';
 
 const Footer = () => {
-	const [colorArray, setColor] = useState(['255,23,23,1', '55,255,71,1', '48,125,255,1', '255,40,254,1']) 
+	const [colorArray, setColor] = useState(['255,23,23,1', '55,255,71,1', '48,125,255,1', '255,40,254,1'])
 
 	const firstToLast = () => {
-		const arr2 = colorArray.splice(-1,1)
-		const ppd = arr2.concat(...colorArray) 
+		const arr2 = colorArray.splice(-1, 1)
+		const ppd = arr2.concat(...colorArray)
 		setColor(ppd)
 	}
-	setTimeout(()=> firstToLast(), 1000)
+	setTimeout(() => firstToLast(), 1000)
 	return (
 		<div
 			style={{
@@ -21,15 +21,14 @@ const Footer = () => {
 			<div className='container'>
 				<div className='footer-wrapper'>
 					<h3>
-						© 2019 HYPERPC LLC - сборка и продажа мощных компьютеров. Все права защищены.
+						© 2019 HYPERPC LLC - Build and sale of powerful computers. All aspects of software are protected by copyright law.
 					</h3>
 					<span>
-						HYPERPC и логотип HYPERPC являются товарными знаками HYPERPC LLC., зарегистрированными в России и других странах.
+						HYPERPC and the HYPERPC logo are trademarks of HYPERPC LLC., registered in Russia and other countries.
 					</span>
 				</div>
 			</div>
 		</div>
 	)
-
 }
 export default Footer
