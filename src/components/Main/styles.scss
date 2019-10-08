@@ -19,13 +19,13 @@
         display: flex;
         justify-content: flex-end;
         width: 100%;
-        height: auto;
+        height: 500px;
         position: relative;
     }
     &__image {
-        height: 90%;
-        width: 90%;
-        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        object-fit: scale-down;
 
     }
     &-text-wrapper {
