@@ -7,9 +7,9 @@ import prof from '../../assets/images/categoryImages/03.jpg'
 import extreme from '../../assets/images/categoryImages/04.jpg'
 
 const MainProductList = () => {
-	const pcArr = [basic, optimal, prof, extreme ]
+	const pcArr = [basic, optimal, prof, extreme]
 	const categoryArr = [
-		'Недорогие игровые компьютеры', 'Идеальные игровые компьютеры', 
+		'Недорогие игровые компьютеры', 'Идеальные игровые компьютеры',
 		'Профессиональные игровые компьютеры', 'Самые мощные игровые компьютеры'
 	]
 
@@ -21,17 +21,17 @@ const MainProductList = () => {
 						Игровые компьютеры
 					</h2>
 					<div className='main-product-list-categories'>
-					{categoryArr.map((category, index)=>(
-						<div key={category}>
-							<div className='main-product-list-category'>
-								<span className='main-product-list-category__name'>
-									{category }
-								</span> 
-								<img src={pcArr[index]} className='main-product-list-category__image' alt='pc'/>
-								<a className='main-product-list-category__link'> подробнее </a>
+						{categoryArr.map((category, index) => (
+							<div key={category}>
+								<div className='main-product-list-category'>
+									<span className='main-product-list-category__name'>
+										{category}
+									</span>
+									<img src={pcArr[index]} className='main-product-list-category__image' alt='pc' />
+									<a className='main-product-list-category__link'> подробнее </a>
+								</div>
 							</div>
-						</div>
-					))}
+						))}
 					</div>
 				</div>
 			</div>

@@ -21,11 +21,10 @@
 		display: flex;
 		justify-content: space-around;
 	}
+
 	&-category {
-		display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+		@include center;
+		margin-bottom: 50px;
 		width: 200px;
 		height: 200px;
 		border: 1px solid $genRed;
@@ -34,11 +33,9 @@
 		&__name {
 			text-align: center;
 		}
-
 		&__image {
 			width: 100%;
 			object-fit: cover;
-
 		}
 		&__link {
 			color: $genRed;

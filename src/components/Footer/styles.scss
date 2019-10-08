@@ -1,0 +1,15 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixins';
+
+.footer {
+    @include componentStyle;
+    box-shadow: 0px 0px 20px 0px red;
+
+    &-wrapper {
+        @include center;
+        height: 50px;
+        color: $genTextCol;
+        font-size: 60%;
+        
+    }
+}
