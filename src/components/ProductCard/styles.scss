@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
-  // color: $genTextCol;
+  color: $genTextCol;
   padding: 10px;
 
 	&-images {
@@ -17,7 +17,6 @@
     overflow: hidden;
     margin-bottom: 15px;
   }
-
   &__image {
     width: 120%;
     height: 120%;
@@ -42,7 +41,7 @@
     &__card {
       font-family: 'Exo 2', sans-serif;
       @include flexCenter;
-      font-weight: 700;
+      font-weight: 900;
       width: 100px;
       height: 30px;
       background-color: $genRed;
@@ -56,8 +55,9 @@
     margin-bottom: 15px;
 
     &_button {
+      color: $genTextCol;
       font-family: 'Exo 2', sans-serif;
-      border: 1px solid $genTextCol; 
+      border: 1px solid $genLineCol; 
       height: 30px;
       padding: 0 11px;
       text-transform: uppercase;
@@ -72,7 +72,7 @@
       padding: 5px 0;
       @include centerwithoutAlign;
       width: 100%;
-      border-top: 1px solid $genTextCol;
+      border-top: 1px solid $genLineCol;
     }
   }
   

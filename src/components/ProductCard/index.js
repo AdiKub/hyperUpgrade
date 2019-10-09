@@ -20,13 +20,13 @@ const ProductCard = () => {
 				<button className='product-card-info-links_button'>view detail</button>
 			</div>
 			<div className='product-card-specification'>
-				{[1, 2, 3, 4, 5, 6].map((spec)=> (
+				{[1, 2, 3, 4, 5, 6].map((spec) => (
 					<div key={spec} className='product-card-specification-wrapper'>
 						<span className='product-card-specification__name'>
 							GPU
 					</span>
 						<span className='product-card-specification__model'>
-							MSI GeForce RTX 2060 SUPER VENTUS 
+							MSI GeForce RTX 2060 SUPER VENTUS
 					</span>
 					</div>
 				))}

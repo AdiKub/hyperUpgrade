@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
-import ProductCard from '../../components/ProductCard';
+import ProductList from '../../components/ProductList';
 
 import '../../assets/styles/main.scss';
 
@@ -9,7 +9,7 @@ const Products = () => {
 	return (
 	<Fragment>
 		<Header />
-		<ProductCard />
+		<ProductList />
 		<Footer />
 	</Fragment>
 	)
