@@ -1,21 +1,17 @@
 import React, { useState } from 'react';
 
+import { lastToFirst } from '../../services/helpers.js' 
 import './styles.scss';
 
 const Footer = () => {
-	const [colorArray, setColor] = useState(['255,23,23,1', '55,255,71,1', '48,125,255,1', '255,40,254,1'])
+	const [colorsArray, setColors] = useState(['255,23,23,1', '55,255,71,1', '48,125,255,1', '255,40,254,1'])
 
-	const firstToLast = () => {
-		const arr2 = colorArray.splice(-1, 1)
-		const ppd = arr2.concat(...colorArray)
-		setColor(ppd)
-	}
-	setTimeout(() => firstToLast(), 1000)
+	setTimeout(() => setColors(lastToFirst(colorsArray)), 1000)
+
 	return (
 		<div
 			style={{
-				background: `linear-gradient(90deg, rgba(${colorArray[0]}) 0%, rgba(${colorArray[1]}) 33%, rgba(${colorArray[2]}) 66%, rgba(${colorArray[3]}) 100%)`,
-				transition: '1000ms',
+				background: `linear-gradient(90deg, rgba(${colorsArray[0]}) 0%, rgba(${colorsArray[1]}) 33%, rgba(${colorsArray[2]}) 66%, rgba(${colorsArray[3]}) 100%)`,
 			}}
 			className='footer'>
 			<div className='container'>
