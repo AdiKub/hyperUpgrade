@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-import './styles.scss';
 import basic from '../../assets/images/categoryImages/01.jpg'
 import optimal from '../../assets/images/categoryImages/02.jpg'
 import prof from '../../assets/images/categoryImages/03.jpg'
 import extreme from '../../assets/images/categoryImages/04.jpg'
+import './styles.scss';
 
 const MainProductList = () => {
 	const pcArr = [basic, optimal, prof, extreme]
@@ -34,11 +35,13 @@ const MainProductList = () => {
 											{category +' '+categoryArr}
 										</span>
 										<img src={pcArr[index]} className='main-product-list-category__image' alt='pc' />
-										<a 
-											href='dfdfd.dfdf' 
-											className='main-product-list-category__link'> 
-											more
-										</a>
+										<Link to='/products'>
+											<a 
+												href='dfdfd.dfdf' 
+												className='main-product-list-category__link'> 
+												more
+											</a>
+										</Link>
 									</div>
 								</div>
 							))}

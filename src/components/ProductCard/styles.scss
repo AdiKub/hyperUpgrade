@@ -46,6 +46,9 @@
       height: 30px;
       background-color: $genRed;
       color: $genTextCol;
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
   &-info-links {
@@ -61,6 +64,9 @@
       height: 30px;
       padding: 0 11px;
       text-transform: uppercase;
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 
