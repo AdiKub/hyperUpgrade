@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 import './styles.scss';
 import pc_01 from '../../assets/images/categoryImages/01.jpg'
@@ -9,6 +11,16 @@ const ProductCard = () => {
 		<div className='product-card'>
 			<div className='product-card-images'>
 				<img alt='pc' src={pc_01} className='product-card__image' />
+			</div>
+			<div className='product-card-rating'>
+				{[1,2,3,4,5].map((num)=>(
+					<FontAwesomeIcon
+						key={num}
+						className="product-card-rating__icon"
+						icon={faStar}
+			/>
+				))}
+
 			</div>
 			<h2 className='product-card__name'> hyper lite</h2>
 			<div className='product-card-buy'>
