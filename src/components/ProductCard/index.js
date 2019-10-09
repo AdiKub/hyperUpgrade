@@ -8,9 +8,9 @@ const ProductCard = () => {
 	return (
 		<div className='product-card'>
 			<div className='product-card-images'>
-				<img src={pc_01} className='product-card__image'/>
+				<img alt='pc' src={pc_01} className='product-card__image' />
 			</div>
-			<h2 className='product-card__name'>lite</h2>
+			<h2 className='product-card__name'> hyper lite</h2>
 			<div className='product-card-buy'>
 				<span className='product-card-buy__price'> price 1200$</span>
 				<button className='product-card-buy__card'>Add to Card</button>
@@ -20,14 +20,16 @@ const ProductCard = () => {
 				<button className='product-card-info-links_button'>view detail</button>
 			</div>
 			<div className='product-card-specification'>
-				<div className='product-card-specification-wrapper'>
-					<span className='product-card-specification__name'>
-						GPU
+				{[1, 2, 3, 4, 5, 6].map((spec)=> (
+					<div key={spec} className='product-card-specification-wrapper'>
+						<span className='product-card-specification__name'>
+							GPU
 					</span>
-					<span className='product-card-specification__model'>
-						MSI GeForce RTX 2060 SUPER VENTUS
+						<span className='product-card-specification__model'>
+							MSI GeForce RTX 2060 SUPER VENTUS 
 					</span>
-				</div>
+					</div>
+				))}
 			</div>
 		</div>
 	)
