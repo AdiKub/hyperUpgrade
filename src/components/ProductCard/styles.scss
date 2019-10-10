@@ -36,50 +36,7 @@
     text-transform: uppercase;
     font-weight: bold;
   }
-  &-buy {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-
-    &__price {
-      text-transform: capitalize;
-      font-weight: 500;
-      font-size: 120%;
-    }
-    &__card {
-      font-family: 'Exo 2', sans-serif;
-      @include flexCenter;
-      font-weight: 900;
-      width: 100px;
-      height: 30px;
-      background-color: $genRed;
-      color: $genTextCol;
-      &:hover {
-        cursor: pointer;
-      }
-    }
-  }
-  &-info-links {
-    @include flexCenter;
-    width: 100%;
-    justify-content: space-between;
-    margin-bottom: 15px;
-
-    &_button {
-      color: $genTextCol;
-      font-family: 'Exo 2', sans-serif;
-      border: 1px solid $genLineCol; 
-      height: 30px;
-      padding: 0 11px;
-      text-transform: uppercase;
-      &:hover {
-        cursor: pointer;
-      }
-    }
-  }
-
+  
   &-specification {
     @include centerwithoutAlign;
     width: 100%;

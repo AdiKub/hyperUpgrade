@@ -3,7 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 import HomePage from './pages/Home/Home';
 import Products from './pages/Products/Products';
-import ProductsDetail from './pages/ProductsDetail/ProductsDetail';
+import ProductDetail from './pages/ProductDetail/ProductDetail';
 import Configurator from './pages/Configurator/Configurator';
 
 export function AppRouter() {
@@ -11,7 +11,7 @@ export function AppRouter() {
     <BrowserRouter>
       <Route path="/" exact component={HomePage} />
       <Route path="/products" component={Products} />
-      <Route path="/detail" component={ProductsDetail} />
+      <Route path="/detail" component={ProductDetail} />
       <Route path="/configurator" component={Configurator} />
     </BrowserRouter>
   );

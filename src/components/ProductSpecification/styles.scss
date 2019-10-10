@@ -1,0 +1,46 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixins';
+
+.product-specifications {
+    @include componentStyle;
+    color: $genTextCol;
+
+    &-line {
+        color: $genBackCol;
+        @include flexCenter;
+        font-size: 200%;
+        font-weight: bold;
+        height: 30px;
+        width: 100%;
+        letter-spacing: 5px;
+        background: linear-gradient(90deg, rgba(55,255,71,1) 0%, rgba(255,23,23,1) 33%, rgba(48,125,255,1) 66%, rgba(255,40,254,1) 100%);
+    }
+
+    &-wrapper {
+        padding: 20px 0;
+        display: flex;
+
+        flex-direction: column;
+    }
+
+    &-list {
+        width: 60%;
+
+        &-box {
+            border-top: 1px solid $genLineCol;
+            padding: 20px 0;
+            width: 100%;
+            display: flex;
+            font-size: 110%;
+        }
+
+        &__name {
+            width: 200px;
+            display: flex;
+            justify-content: space-between;
+        }
+        &__model {
+            font-weight: bold;
+        }
+    }
+}
