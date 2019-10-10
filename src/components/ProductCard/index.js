@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 import './styles.scss';
 import pc_01 from '../../assets/images/categoryImages/01.jpg'
@@ -28,8 +29,12 @@ const ProductCard = () => {
 				<button className='product-card-buy__card'>Add to Card</button>
 			</div>
 			<div className='product-card-info-links'>
-				<button className='product-card-info-links_button'>configurator</button>
-				<button className='product-card-info-links_button'>view detail</button>
+				<Link to='/configurator'>
+					<button className='product-card-info-links_button'>configurator</button>
+				</Link>
+				<Link to='/detail'>	
+					<button className='product-card-info-links_button'>view detail</button> 
+				</Link>
 			</div>
 			<div className='product-card-specification'>
 				{[1, 2, 3, 4, 5, 6].map((spec) => (

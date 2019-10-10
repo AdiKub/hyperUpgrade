@@ -1,0 +1,51 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixins';
+
+.product-list {
+  
+    &-controls {
+      margin-bottom: 10px;
+      width: 100%;
+      height: 40px;
+      border-top: 1px solid $genLineCol;
+      border-bottom: 1px solid $genLineCol;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  
+      &-sorting {
+        display: flex;
+  
+        &__name {
+          font-size: 100%;
+        }
+  
+        &_button {
+          margin-left: 20px;
+          font-size: 100%;
+          color: $genTextCol;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        &_icon {
+          margin-left: 5px;
+          font-size: 70%;
+        }
+      }
+      &-search {
+        display: flex;
+        align-items: center;
+        width: auto;
+        border-left: 1px solid $genLineCol;
+        color: $genLineCol;
+        
+        &_input {
+          font-size: 100%;
+          height: 30px;
+          color: $genTextCol;
+          padding: 0 10px;
+        }
+      }
+    }
+  }

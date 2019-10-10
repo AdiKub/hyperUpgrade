@@ -36,11 +36,10 @@ const MainProductList = () => {
 										</span>
 										<img src={pcArr[index]} className='main-product-list-category__image' alt='pc' />
 										<Link to='/products'>
-											<a 
-												href='dfdfd.dfdf' 
+											<span
 												className='main-product-list-category__link'> 
 												more
-											</a>
+											</span>
 										</Link>
 									</div>
 								</div>
