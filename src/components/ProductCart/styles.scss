@@ -15,15 +15,39 @@
   }
 
   &__title {
-    margin-top: 30px;
+    margin: 40px 0;
     color: $genTextCol;
   }
 
   &-table {
     display: flex;
     flex-direction: column;
-    width: 700px;
+    color: $genTextCol;
 
+    &__line {
+      width: 750px;
+    }
+
+    &-items {
+      display: flex;
+      padding: 10px 20px;
+      border-bottom: 1px solid $genLineCol;
+    }
+    &__card {
+      display: flex;
+      align-items: center;
+
+      &_img {
+        height: 100px;
+        width: 150px;
+        object-fit: cover;
+      }
+
+      &__name {
+        font-size: 100%;
+        font-weight: bold;
+      }
+    } 
     &__product {
       width: 300px;
     }
@@ -36,14 +60,40 @@
     &__subtotal {
       width: 150px;
     }
+    &__delete:hover {
+      cursor: pointer;
+    }
 
     &-header {
+      padding: 10px 20px;
+      display: flex;
       width: 100%;
       display: flex;
       background-color: rgb(53, 53, 53);
       
       &__name {
         color: $genTextCol;
+        @include centerwithoutAlign;
+      }
+    }
+
+    &-count {
+
+      &-wrapper {
+        display: flex;
+        width: auto;
+      }
+      &__button {
+        @include flexCenter;
+        width: 25px;
+        height: 25px;
+        margin: 1px;
+        background-color: rgb(53, 53, 53);
+        border: 1px solid $genLineCol;
+        color: $genTextCol;
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
   }

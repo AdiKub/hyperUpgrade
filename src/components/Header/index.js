@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 import './styles.scss';
 
 const Hearder = () => {
-	const [cartCount, setCartCount] = useState('0');
+	const cartCount = 0;
 	
 	return (
 		<div className='header'>

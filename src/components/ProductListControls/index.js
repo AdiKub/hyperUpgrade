@@ -21,7 +21,7 @@ const ProductListControls = () => {
 						popular
           <FontAwesomeIcon
 							className="product-list-controls-sorting_icon"
-							icon={faSortAmountUpAlt}
+							icon={faSortAmountDownAlt}
 						/>
 					</button>
 					<button className='product-list-controls-sorting_button'>
