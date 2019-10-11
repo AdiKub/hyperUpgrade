@@ -4,6 +4,7 @@
 .product-specifications {
     @include componentStyle;
     color: $genTextCol;
+    flex: 1 1 auto;
 
     &-line {
         color: $genBackCol;

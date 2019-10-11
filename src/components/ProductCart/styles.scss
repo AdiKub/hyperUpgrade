@@ -1,0 +1,50 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixins';
+
+.product-cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $genBackCol;
+  flex: 1 1 auto;
+
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-top: 30px;
+    color: $genTextCol;
+  }
+
+  &-table {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+
+    &__product {
+      width: 300px;
+    }
+    &__available {
+      width: 150px;
+    }
+    &__total {
+      width: 150px;
+    }
+    &__subtotal {
+      width: 150px;
+    }
+
+    &-header {
+      width: 100%;
+      display: flex;
+      background-color: rgb(53, 53, 53);
+      
+      &__name {
+        color: $genTextCol;
+      }
+    }
+  }
+}

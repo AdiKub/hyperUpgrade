@@ -20,6 +20,7 @@ const ProductSpecification = () => {
                 <span className='product-specifications-list__model'>MSI GeForce RTX 2060 SUPER VENTUS</span> 
               </div>
             ))}
+
           </div>
         </div>
       </div>

@@ -32,10 +32,15 @@
             font-size: 80%; 
             color: $genTextCol;
 
+            &_cart_count {
+                margin-left: 10px;
+                color: $genRed;
+            }
+
             &_login {
                 font-weight: 800;
-                @include center;
-                width: 150px;
+                @include flexCenter;
+                width: 100px;
                 height: 30px;
                 border: 1px solid $genRed;
                 border-radius: 5px;

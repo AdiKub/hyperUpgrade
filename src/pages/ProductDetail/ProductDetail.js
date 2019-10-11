@@ -8,12 +8,12 @@ import '../../assets/styles/main.scss';
 
 const ProductsDetail = () => {
 	return (
-	<Fragment>
-		<Header />
-		<ProductDetailDescription />
-		<ProductSpecification />
-		<Footer />
-	</Fragment>
+		<Fragment>
+			<Header />
+			<ProductDetailDescription />
+			<ProductSpecification />
+			<Footer />
+		</Fragment>
 	)
 }
 

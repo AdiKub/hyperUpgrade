@@ -5,6 +5,7 @@
   @include componentStyle;
   padding-top: 50px;
   color: $genTextCol;
+  flex: 1 1 auto;
 
   &-wrapper {
     display: flex;
