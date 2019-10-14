@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './styles.scss';
 
 const Hearder = () => {
-	const cartCount = 0;
+	const cartCount = 1;
 	
 	return (
 		<div className='header'>

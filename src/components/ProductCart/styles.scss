@@ -25,12 +25,12 @@
     color: $genTextCol;
 
     &__line {
-      width: 750px;
+      width: 700px;
     }
 
     &-items {
       display: flex;
-      padding: 10px 20px;
+      padding: 0 20px;
       border-bottom: 1px solid $genLineCol;
     }
     &__card {
@@ -38,7 +38,7 @@
       align-items: center;
 
       &_img {
-        height: 100px;
+        height: 120px;
         width: 150px;
         object-fit: cover;
       }
@@ -49,16 +49,16 @@
       }
     } 
     &__product {
-      width: 300px;
+      width: 400px;
     }
     &__available {
-      width: 150px;
+      width: 100px;
     }
     &__total {
-      width: 150px;
+      width: 100px;
     }
     &__subtotal {
-      width: 150px;
+      width: 100px;
     }
     &__delete:hover {
       cursor: pointer;
@@ -87,7 +87,7 @@
         @include flexCenter;
         width: 25px;
         height: 25px;
-        margin: 1px;
+        margin: 0.5px;
         background-color: rgb(53, 53, 53);
         border: 1px solid $genLineCol;
         color: $genTextCol;

@@ -23,7 +23,7 @@ const ProductCard = () => {
 				))}
 			</div>
 			<h2 className='product-card__name'> hyper lite</h2>
-			<ProductInteractive/>
+			<ProductInteractive />
 			<div className='product-card-specification'>
 				{[1, 2, 3, 4, 5, 6].map((spec) => (
 					<div key={spec} className='product-card-specification-wrapper'>
