@@ -33,7 +33,7 @@ const configureStore = (initialState = {}) => {
     bindMiddleware(),
   );
 
-  store.sagaTask = sagaMiddleware.run(rootSaga, { api: api.create() });
+  //store.sagaTask = sagaMiddleware.run(rootSaga, { api: api.create() });
 
   return store;
 };

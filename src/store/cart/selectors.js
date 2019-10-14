@@ -1,7 +1,6 @@
 export const initialState = {
-  places: [],
-  placeDetail: {
-    user: {
+  cart: {
+    mega: {
       firstName: '',
     },
   },

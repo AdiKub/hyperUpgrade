@@ -5,9 +5,10 @@ import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import './styles.scss';
 import pc_01 from '../../assets/images/categoryImages/01.jpg'
 
-const ProductCard = () => {
+const ProductCard = (props) => {
+	const { cart } = props;
 	const [productCount, setCount] = useState(1)
-
+	console.log(cart)
 	return (
 		<div className='product-cart'>
 			<div className='container'>
