@@ -6,7 +6,6 @@ import { isProd } from '../config';
 import rootReducer from './reducer';
 import rootSaga from './sagas';
 import api from '../services/api';
-import { userStart, setLogined } from './user/actions';
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -33,15 +32,11 @@ const configureStore = (initialState = {}) => {
     bindMiddleware(),
   );
 
-  //store.sagaTask = sagaMiddleware.run(rootSaga, { api: api.create() });
+  store.sagaTask = sagaMiddleware.run(rootSaga, { api: api.create() });
 
   return store;
 };
 const store = configureStore();
-const isLogined = localStorage.getItem('token');
-if (isLogined) {
-  store.dispatch(setLogined());
-}
-store.dispatch(userStart());
+//const isLogined = localStorage.getItem('token');
 
 export default store;

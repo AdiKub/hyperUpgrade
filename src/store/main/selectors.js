@@ -1,13 +1,5 @@
 export const initialState = {
-  topDestinations: [],
-  categories: [],
-  cities: [],
-  responseStatuses: {
-    isSuccess: false,
-    isModalOpen: false,
-    message: '',
-    title: '',
-  },
+  cotegoryPCs: [],
 };
 
 export const getState = (state = initialState) => state || initialState;

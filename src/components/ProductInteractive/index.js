@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 
 import './styles.scss';
 
-const ProductInteractive = () => {
+const ProductInteractive = (props) => {
+  const { pc } = props;
   const pathName = window.location.pathname === '/detail';
   return (
     <div 
@@ -15,7 +16,7 @@ const ProductInteractive = () => {
             fontSize: pathName && '150%', 
             fontWeight: pathName && '900',
             color: pathName && '#e91330'}}
-          className='product-card-interactive-buy__price'> price 1200$</span>
+          className='product-card-interactive-buy__price'> {pc.price}$</span>
         <button className='product-card-interactive-buy__card'>Add to Card</button>
       </div>
       <div className='product-card-interactive-info-links'>

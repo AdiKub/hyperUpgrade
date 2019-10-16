@@ -1,13 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {  getWeatherStart } from '../../store/main/actions';
+import {  getPcsByCotegoryStart } from '../../store/main/actions';
 
-import ProductCard from '../../components/ProductCard';
+import MainProductList from '../../components/MainProductList';
 
-const ProductCardContainer = props => <ProductCard {...props} />;
+const MainProductListContainer = props => <MainProductList {...props} />;
 
 const mapDispatchToProps = dispatch => ({
-  getWeatherStartAction: (coords = {}) => dispatch(getWeatherStart(coords)),
+  getPcsByCotegoryStartAction: (coords = {}) => dispatch(getPcsByCotegoryStart(coords)),
 });
 
-export default connect(null, mapDispatchToProps)(ProductCardContainer);
+export default connect(null, mapDispatchToProps)(MainProductListContainer);

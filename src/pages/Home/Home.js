@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import MainProductList from '../../components/MainProductList';
+import MainProductListContainer from '../../containers/MainProductListContainer';
 import Main from '../../components/Main';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
@@ -11,7 +11,7 @@ const Home = () => {
 	<Fragment>
 		<Header />
 		<Main />
-		<MainProductList />
+		<MainProductListContainer />
 		<Footer />
 	</Fragment>
 	)

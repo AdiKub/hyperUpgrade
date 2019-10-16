@@ -9,6 +9,13 @@
   margin-bottom: 20px;
   color: $genTextCol;
   padding: 10px;
+  
+  @media screen and (max-width: 1439px) {
+    width: 270px;
+  }
+  @media screen and (max-width: 1199px) {
+    width: 340px;
+  }
 
 	&-images {
     width: 100%;
@@ -28,7 +35,7 @@
     &__icon {
       margin-left: 5px;
       font-size: 90%;
-      color: $genRed;
+      color: #444444;
     }
   }
 
