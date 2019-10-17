@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-//import {  getCurrentWeather } from '../../store/main/actions';
+import {  getPcsByCotegoryStart } from '../../store/main/actions';
 
 import ProductList from '../../components/ProductList';
 
@@ -10,8 +10,8 @@ const mapStateToProps = store => ({
   cotegoryPCs: store.main.cotegoryPCs,
 });
 
-// const mapDispatchToProps = dispatch => ({
-//   getCurrentWeatherAction: (coords = '') => dispatch(getCurrentWeather(coords)),
-// });
+const mapDispatchToProps = dispatch => ({
+  getPcsByCotegoryStartAction: (category = {}) => dispatch(getPcsByCotegoryStart(category)),
+});
 
-export default connect(mapStateToProps, null)(ProductListContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(ProductListContainer);

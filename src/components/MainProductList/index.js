@@ -7,13 +7,13 @@ import prof from '../../assets/images/categoryImages/03.jpg'
 import extreme from '../../assets/images/categoryImages/04.jpg'
 import './styles.scss';
 
-const MainProductList = (props) => {
-	const { getPcsByCotegoryStartAction } = props;
+const MainProductList = () => {
+
 	const pcArr = [basic, optimal, prof, extreme]
 	const categoryArr = ['Gaming']
 	const categoryPCArr = [
 		'inexpensive', 'perfect',
-		'professional ', 'powerful'
+		'professional', 'powerful'
 	]
 
 	return (
@@ -36,7 +36,7 @@ const MainProductList = (props) => {
 										<img src={pcArr[index]} className='main-product-list-category__image' alt='pc' />
 										<Link to='/products'>
 											<span
-												onClick={()=> getPcsByCotegoryStartAction(category)}
+												onClick={()=> localStorage.setItem('pcCategory', category)}
 												className='main-product-list-category__link'> 
 												more
 											</span>

@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-import HomePage from './pages/Home/Home';
-import Products from './pages/Products/Products';
-import ProductDetail from './pages/ProductDetail/ProductDetail';
-import Configurator from './pages/Configurator/Configurator';
-import MyCart from './pages/MyCart/MyCart';
+import HomePage from './pages/Home';
+import Products from './pages/Products';
+import ProductDetail from './pages/DinamicPages/ProductDetail';
+import Configurator from './pages/Configurator';
+import MyCart from './pages/MyCart';
 
 export function AppRouter() {
   return (

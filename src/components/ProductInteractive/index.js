@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './styles.scss';
 
 const ProductInteractive = (props) => {
-  const { pc } = props;
+  const { selectedPc } = props;
   const pathName = window.location.pathname === '/detail';
   return (
     <div 
@@ -16,7 +16,7 @@ const ProductInteractive = (props) => {
             fontSize: pathName && '150%', 
             fontWeight: pathName && '900',
             color: pathName && '#e91330'}}
-          className='product-card-interactive-buy__price'> {pc.price}$</span>
+          className='product-card-interactive-buy__price'> {selectedPc.price}$</span>
         <button className='product-card-interactive-buy__card'>Add to Card</button>
       </div>
       <div className='product-card-interactive-info-links'>
@@ -25,7 +25,9 @@ const ProductInteractive = (props) => {
         </Link>
         {!pathName && 
           <Link to='/detail'>
-           <button className='product-card-interactive-info-links_button'>view detail</button>
+           <button 
+              onClick={ () => localStorage.setItem( 'selectedPC' , selectedPc._id) }
+              className='product-card-interactive-info-links_button'>view detail</button>
           </Link>
         }
       </div>

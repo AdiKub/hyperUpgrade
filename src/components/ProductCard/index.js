@@ -27,7 +27,7 @@ const ProductCard = (props) => {
 				))}
 			</div>
 			<h2 className='product-card__name'> Hyper {pc.pcname} </h2>
-			<ProductInteractive pc={pc} />
+			<ProductInteractive selectedPc={pc} />
 			<div className='product-card-specification'>
 				{Object.keys(pc.specifications).map((spec) => (
 					<div key={spec} className='product-card-specification-wrapper'>

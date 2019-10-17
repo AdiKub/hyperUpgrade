@@ -2,7 +2,8 @@ import React from 'react';
 
 import './styles.scss';
 
-const ProductSpecification = () => {
+const ProductSpecification = (props) => {
+  const { selectedPc } = props;
 
   return (
     <div className='product-specifications'>
@@ -12,15 +13,14 @@ const ProductSpecification = () => {
       <div className='container'>
         <div className='product-specifications-wrapper'>
           <div className='product-specifications-list'>
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((detail) => (
+            {Object.keys(selectedPc.specifications).map((detail) => (
               <div 
                 key={detail}
                 className='product-specifications-list-box'>
-                <span className='product-specifications-list__name'>graphics card </span>
-                <span className='product-specifications-list__model'>MSI GeForce RTX 2060 SUPER VENTUS</span> 
+                <span className='product-specifications-list__name'> {detail} </span>
+                <span className='product-specifications-list__model'> { selectedPc.specifications[detail] } </span> 
               </div>
             ))}
-
           </div>
         </div>
       </div>

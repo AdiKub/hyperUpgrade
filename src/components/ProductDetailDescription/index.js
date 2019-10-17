@@ -4,7 +4,8 @@ import ProductInteractive from '../ProductInteractive';
 import './styles.scss';
 import pcimage from '../../assets/images/categoryImages/01.jpg'
 
-const ProductDetailDescription = () => {
+const ProductDetailDescription = (props) => {
+  const { selectedPc } = props;
 
   return (
     <div className='product-detail-description'>
@@ -18,9 +19,9 @@ const ProductDetailDescription = () => {
           </div>
           <div className='product-detail-description-info'> 
             <h2 className='product-detail-description-info__title'>HYPER</h2>
-            <h3 className='product-detail-description-info__title'> killer </h3>
-            <p className='product-detail-description-info__text' >Sed diam rutrum nam: ipsum sed orci odio: vitae adipiscing rutrum. Sit tempus sed, integer auctor nam sodales ipsum porttitor mattis eget. Ut porta porttitor metus sed odio molestie maecenas lorem metus orci massa. Donec et fusce ipsum nulla nec arcu: vitae tempus, orci, enim metus at odio. Congue vitae quisque elementum ipsum — at risus metus ut: nec massa, in</p>
-            <ProductInteractive/>
+            <h3 className='product-detail-description-info__title'> {selectedPc.pcname} </h3>
+            <p className='product-detail-description-info__text' > {selectedPc.description} </p>
+            <ProductInteractive selectedPc={selectedPc} />
           </div>
         </div>
       </div>
