@@ -6,7 +6,7 @@ import Header from '../../components/Header';
 const HeaderContainer = props => <Header {...props} />;
 
 const mapStateToProps = store => ({
-  futureWeatherStore: store.futureWeatherStore,
+  pcCart: store.pcCart.pcCart,
 });
 
 export default connect(mapStateToProps, null)(HeaderContainer);

@@ -1,13 +1,13 @@
 import React, { Fragment } from 'react';
 import Footer from '../components/Footer';
-import Header from '../components/Header';
+import HeaderContainer from '../containers/HeaderContainer';
 
 import '../assets/styles/main.scss';
 
 const Configurator = () => {
 	return (
 	<Fragment>
-		<Header />
+		<HeaderContainer />
 
 		<Footer />
 	</Fragment>

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { getPcDetailStart } from '../../store/actions';
 
 import Footer from '../../components/Footer';
-import Header from '../../components/Header';
+import HeaderContainer from '../../containers/HeaderContainer';
 import ProductDetailDescription from '../../components/ProductDetailDescription';
 import ProductSpecification from '../../components/ProductSpecification';
 
@@ -21,7 +21,7 @@ const ProductsDetail = (props) => {
 	
 	return (
 		<Fragment>
-			<Header />
+			<HeaderContainer />
 			<ProductDetailDescription selectedPc={selectedPc} />
 			<ProductSpecification selectedPc={selectedPc}/>
 			<Footer />

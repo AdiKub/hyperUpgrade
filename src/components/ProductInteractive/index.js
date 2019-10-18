@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom';
 import './styles.scss';
 
 const ProductInteractive = (props) => {
-  const { selectedPc } = props;
+  const { selectedPc, setPcToCartStartAction } = props;
   const pathName = window.location.pathname === '/detail';
+    
   return (
     <div 
       style={{borderTop: pathName  && '1px solid #5c5c5c'}}
@@ -17,7 +18,11 @@ const ProductInteractive = (props) => {
             fontWeight: pathName && '900',
             color: pathName && '#e91330'}}
           className='product-card-interactive-buy__price'> {selectedPc.price}$</span>
-        <button className='product-card-interactive-buy__card'>Add to Card</button>
+        <button
+          onClick={()=> setPcToCartStartAction(selectedPc)}
+          className='product-card-interactive-buy__card'>
+          Add to Card
+        </button>
       </div>
       <div className='product-card-interactive-info-links'>
         <Link to='/configurator'>

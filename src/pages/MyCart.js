@@ -1,14 +1,14 @@
 import React, { Fragment } from 'react';
 
 import Footer from '../components/Footer';
-import Header from '../components/Header';
+import HeaderContainer from '../containers/HeaderContainer';
 import ProductCartContainer from '../containers/ProductCartContainer';
 import '../assets/styles/main.scss';
 
 const MyCart = () => {
 	return (
 	<Fragment>
-		<Header />
+		<HeaderContainer />
         <ProductCartContainer />
 		<Footer />
 	</Fragment>

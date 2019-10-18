@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ProductInteractive from '../ProductInteractive';
+import ProductInteractiveContainer from '../../containers/ProductInteractiveContainer'
 import './styles.scss';
 import pcimage from '../../assets/images/categoryImages/01.jpg'
 
@@ -21,7 +21,7 @@ const ProductDetailDescription = (props) => {
             <h2 className='product-detail-description-info__title'>HYPER</h2>
             <h3 className='product-detail-description-info__title'> {selectedPc.pcname} </h3>
             <p className='product-detail-description-info__text' > {selectedPc.description} </p>
-            <ProductInteractive selectedPc={selectedPc} />
+            <ProductInteractiveContainer selectedPc={selectedPc} />
           </div>
         </div>
       </div>

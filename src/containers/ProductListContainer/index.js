@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {  getPcsByCotegoryStart } from '../../store/main/actions';
+import {  getPcsByCotegoryStart } from '../../store/actions';
 
 import ProductList from '../../components/ProductList';
 

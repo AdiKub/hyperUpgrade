@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import Footer from '../components/Footer';
-import Header from '../components/Header';
+import HeaderContainer from '../containers/HeaderContainer';
 import ProductListContainer from '../containers/ProductListContainer';
 
 import '../assets/styles/main.scss';
@@ -8,7 +8,7 @@ import '../assets/styles/main.scss';
 const Products = () => {
 	return (
 	<Fragment>
-		<Header />
+		<HeaderContainer />
 		<ProductListContainer />
 		<Footer />
 	</Fragment>

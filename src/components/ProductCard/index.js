@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 
-import ProductInteractive from '../ProductInteractive'
+import ProductInteractiveContainer from '../../containers/ProductInteractiveContainer';
 import './styles.scss';
 
 const ProductCard = (props) => {
@@ -27,7 +27,7 @@ const ProductCard = (props) => {
 				))}
 			</div>
 			<h2 className='product-card__name'> Hyper {pc.pcname} </h2>
-			<ProductInteractive selectedPc={pc} />
+			<ProductInteractiveContainer selectedPc={pc} />
 			<div className='product-card-specification'>
 				{Object.keys(pc.specifications).map((spec) => (
 					<div key={spec} className='product-card-specification-wrapper'>
