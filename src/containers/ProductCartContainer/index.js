@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {   } from '../../store/actions';
+import { setPcToCartStart, deletePcFromCartStart } from '../../store/actions';
 
 import ProductCart from '../../components/ProductCart';
 
@@ -10,8 +10,9 @@ const mapStateToProps = store => ({
   cart: store.pcCart.pcCart,
 });
 
-// const mapDispatchToProps = dispatch => ({
-//   getWeatherStartAction: (coords = {}) => dispatch(getWeatherStart(coords)),
-// });
+const mapDispatchToProps = dispatch => ({
+  setPcToCartStartAction: (pc) => dispatch(setPcToCartStart(pc)),
+  deletePcFromCartStartAction: (pc)=> dispatch(deletePcFromCartStart(pc))
+});
 
-export default connect(mapStateToProps, null)(ProductCartContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(ProductCartContainer);

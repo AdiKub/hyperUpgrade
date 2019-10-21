@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { getTotalCount } from '../../services/helpers'
 import './styles.scss';
 
 const Hearder = (props) => {
 	const { pcCart } = props;
-	const cartCount = pcCart ? Object.keys(pcCart).length : 0;
 	
 	return (
 		<div className='header'>
@@ -26,7 +26,7 @@ const Hearder = (props) => {
 							<div className='header-list_link_login header-list_link'>
 								my cart 
 								<span className='header-list_link_cart_count'> 
-									{cartCount != 0 && cartCount} 
+									{getTotalCount(pcCart)} 
 								</span> 
 							</div>
 						</Link>

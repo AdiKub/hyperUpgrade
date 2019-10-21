@@ -13,3 +13,9 @@ export const setPcToCartFailure = pc => ({
   pc,
 });
 
+export const deletePcFromCartStart = pc => ({
+  type: actionTypes.DELET_PC_FROM_CART_START ,
+  pc,
+});
+
+
