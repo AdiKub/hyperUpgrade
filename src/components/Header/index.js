@@ -5,7 +5,11 @@ import { getTotalCount } from '../../services/helpers'
 import './styles.scss';
 
 const Hearder = (props) => {
-	const { pcCart } = props;
+	const { pcCart, getPcsByCotegoryStartAction } = props;
+	const categoryPCArr = [
+		'inexpensive', 'perfect',
+		'professional', 'powerful'
+	]
 	
 	return (
 		<div className='header'>
@@ -19,7 +23,20 @@ const Hearder = (props) => {
 					</Link>
 					<div>
 						<ul className='header-list'>
-						<Link to='/products'><span className='header-list_link'> products </span> </Link>
+						<Link to='/products'>
+							<div className='header-list_link header-list_link_products' > products 
+								<div className='header-list_link_categories'>
+									{categoryPCArr.map((category)=>
+											<div
+												onClick={()=>getPcsByCotegoryStartAction(category)} 
+												className='header-list_link_categories_category' key={category} > 
+												{category}
+											</div>
+										)}
+								</div>
+
+							</div> 
+						</Link>
 						<Link to='/overview'><span className='header-list_link'> overview </span> </Link>
 						<Link to='/contacts'><span className='header-list_link'> contacts </span> </Link>
 						<Link to='/mycart'>
