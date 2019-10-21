@@ -19,6 +19,12 @@ const ProductInteractive = (props) => {
             color: pathName && '#e91330'}}
           className='product-card-interactive-buy__price'> {selectedPc.price}$</span>
         <button
+          onMouseDown ={(e)=> {
+            e.target.style.backgroundColor = 'white'; 
+            e.target.style.color = '#e91330'; }}
+          onMouseUp ={(e)=> {
+            e.target.style.backgroundColor = '#e91330'; 
+            e.target.style.color = 'white'}}
           onClick={()=> setPcToCartStartAction(selectedPc)}
           className='product-card-interactive-buy__card'>
           Add to Card

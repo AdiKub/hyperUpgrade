@@ -3,6 +3,7 @@
 
 .main {
     @include componentStyle;
+    padding-top: 50px;
     z-index: 0;
     flex: 1 1 auto;
 
