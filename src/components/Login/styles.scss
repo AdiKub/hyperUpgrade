@@ -13,25 +13,23 @@
     justify-content: space-between;
     justify-content: center;
   }
+
   &-form {
 
     &-container {
+      height: auto;
       display: flex;
       flex-direction: column;
       margin-bottom: 10px;
     }
 
-    &__label {
-      margin-left: 3px;
-    }
-
     &__input {
-      color: $genTextCol;
+      background-color: $genTextCol;
+      padding-left: 10px;
       width: 200px;
       height: 30px;
-      padding: 3px;
-      border: 1px solid gray;
-      border-radius: 3px;
+      border-bottom: 1px solid gray;
+
     }
 
     &__button {

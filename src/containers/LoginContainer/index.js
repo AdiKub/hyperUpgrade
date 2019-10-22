@@ -1,8 +1,21 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { setPcToCartStart } from '../../store/actions';
+import { reduxForm } from 'redux-form';
+//import { setPcToCartStart } from '../../store/actions';
 
 import Login from '../../components/Login';
+import { createValidator, email, required } from '../../services/validations';
+
+const validate = createValidator({
+  firstName: [required],
+  email: [required, email],
+  lastName: [required],
+});
+
+const formConfig = {
+  form: 'login',
+  validate,
+};
 
 const LoginContainer = props => <Login {...props} />;
 
@@ -14,4 +27,4 @@ const mapStateToProps = store => ({
 //   setPcToCartStartAction: () => dispatch(setPcToCartStart()),
 // });
 
-export default connect(mapStateToProps, null)(LoginContainer);
+export default connect(mapStateToProps, null)(reduxForm(formConfig)(LoginContainer));

@@ -1,69 +1,59 @@
 import React from 'react';
-import { Field, reduxForm } from 'redux-form';
+import { Field } from 'redux-form';
 
+import customInputField from '../CustomFields';
 import './styles.scss';
 
 const Login = (props) => {
-  const { handleSubmit, pristine, reset, submitting } = props
+  const { handleSubmit, pristine, submitting } = props;
+
+  const onSubmitHandle = (formValues) => {
+    console.log(formValues);
+  };
 
   return (
     <div className='login'>
       <div className='container'>
         <div className='login-wrapper'>
-          <form className='login-form' onSubmit={handleSubmit}>
+          <form className='login-form' onSubmit={handleSubmit(onSubmitHandle)}>
             <div className='login-form-container'>
-              <label className='login-form__label'>First Name</label>
-              <div>
                 <Field
                   className='login-form__input'
                   name="firstName"
-                  component="input"
+                  component={customInputField}
                   type="text"
                   placeholder="First Name"
                 />
-              </div>
             </div>
             <div className='login-form-container'>
-              <label className='login-form__label'>Last Name</label>
-              <div>
                 <Field
                   className='login-form__input'
                   name="lastName"
-                  component="input"
+                  component={customInputField}
                   type="text"
                   placeholder="Last Name"
                 />
-              </div>
             </div>
             <div className='login-form-container'>
-              <label className='login-form__label'>Email</label>
-              <div>
                 <Field
                   className='login-form__input'
                   name="email"
-                  component="input"
+                  component={customInputField}
                   type="email"
                   placeholder="Email"
                 />
-              </div>
             </div>
-
             <div className='login-form-container'>
               <button className='login-form__button' type="submit" disabled={pristine || submitting}>
-                Submit
-              </button>
-              <button className='login-form__button' type="button" disabled={pristine || submitting} onClick={reset}>
-                Clear Values
+                Login
               </button>
             </div>
           </form>
-
         </div>
       </div>
     </div>
   )
 }
-export default reduxForm({
-  form: 'simple' // a unique identifier for this form
-})(Login)
+
+export default Login;
 
