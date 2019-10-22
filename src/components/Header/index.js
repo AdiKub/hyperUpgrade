@@ -5,12 +5,12 @@ import { getTotalCount } from '../../services/helpers'
 import './styles.scss';
 
 const Hearder = (props) => {
-	const { pcCart, getPcsByCotegoryStartAction } = props;
+	const { pcCart, getPcsByCotegoryStartAction, match } = props;
 	const categoryPCArr = [
 		'inexpensive', 'perfect',
 		'professional', 'powerful'
 	]
-
+	
 	return (
 		<div className='header'>
 			<div className='container'>
@@ -22,13 +22,15 @@ const Hearder = (props) => {
 						</h2>
 					</Link>
 					<div>
-						<ul className='header-list'>
+						<div className='header-list'>
 							<Link to='/products'>
 								<div className='header-list_link header-list_link_products' > products
 								<div className='header-list_link_categories'>
 										{categoryPCArr.map((category) =>
 											<div
-												onClick={() => getPcsByCotegoryStartAction(category)}
+												onClick={() => {
+													getPcsByCotegoryStartAction(category)
+													localStorage.setItem('pcCategory', category)}}
 												className='header-list_link_categories_category' key={category} >
 												{category}
 											</div>
@@ -46,8 +48,10 @@ const Hearder = (props) => {
 								</span>
 								</div>
 							</Link>
-							<span href='/d' className='header-list_link header-list_link_login'> sign in </span>
-						</ul>
+							<Link to='/login'>
+								<span className='header-list_link header-list_link_login'> sign in </span>
+							</Link>
+						</div>
 					</div>
 				</div>
 			</div>

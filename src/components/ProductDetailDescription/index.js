@@ -6,7 +6,6 @@ import pcimage from '../../assets/images/categoryImages/01.jpg'
 
 const ProductDetailDescription = (props) => {
   const { selectedPc } = props;
-
   return (
     <div className='product-detail-description'>
       <div className='container'>

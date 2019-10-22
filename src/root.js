@@ -6,6 +6,7 @@ import Products from './pages/Products';
 import ProductDetail from './pages/DinamicPages/ProductDetail';
 import Configurator from './pages/Configurator';
 import MyCart from './pages/MyCart';
+import LoginPage from './pages/DinamicPages/LoginPage';
 
 export function AppRouter() {
   return (
@@ -15,6 +16,7 @@ export function AppRouter() {
       <Route path="/detail" component={ProductDetail} />
       <Route path="/configurator" component={Configurator} />
       <Route path="/mycart" component={MyCart} />
+      <Route path="/login" component={LoginPage} />
     </BrowserRouter>
   );
 };

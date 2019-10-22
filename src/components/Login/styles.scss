@@ -1,0 +1,52 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixins';
+
+.login {
+  @include componentStyle;
+  padding-top: 80px;
+  color: $genTextCol;
+  flex: 1 1 auto;
+
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-content: center;
+  }
+  &-form {
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+    }
+
+    &__label {
+      margin-left: 3px;
+    }
+
+    &__input {
+      color: $genTextCol;
+      width: 200px;
+      height: 30px;
+      padding: 3px;
+      border: 1px solid gray;
+      border-radius: 3px;
+    }
+
+    &__button {
+      margin-bottom: 10px;
+      width: 200px;
+      background-color: $genRed;
+      color: $genTextCol;
+      font-weight: 900;
+      height: 30px;
+      border-radius: 3px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+}
