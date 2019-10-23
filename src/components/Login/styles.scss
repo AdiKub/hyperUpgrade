@@ -10,17 +10,46 @@
   &-wrapper {
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: space-between;
     justify-content: center;
   }
 
   &-form {
+    
+
+    &_title {
+      display: flex;
+      width: 220px;
+      justify-content: space-between;
+
+      &_button{
+        height: 30px;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        border: 1px solid $genLineCol;
+        color: #959595;
+
+        &__activate {
+          border: none;
+          color: $genTextCol;
+          background-color: $genLineCol; 
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
 
     &-container {
+      background-color: $genLineCol;
+      padding: 10px;
       height: auto;
       display: flex;
       flex-direction: column;
-      margin-bottom: 10px;
+
     }
 
     &__input {
@@ -33,13 +62,12 @@
     }
 
     &__button {
-      margin-bottom: 10px;
-      width: 200px;
-      background-color: $genRed;
+      margin-top: 10px;
+      width: 100%;
+      background-color: $genLineCol;
       color: $genTextCol;
       font-weight: 900;
       height: 30px;
-      border-radius: 3px;
 
       &:hover {
         cursor: pointer;

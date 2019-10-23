@@ -10,6 +10,7 @@ const validate = createValidator({
   firstName: [required],
   email: [required, email],
   lastName: [required],
+  password: [required]
 });
 
 const formConfig = {

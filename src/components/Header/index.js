@@ -49,7 +49,7 @@ const Hearder = (props) => {
 								</div>
 							</Link>
 							<Link to='/login'>
-								<span className='header-list_link header-list_link_login'> sign in </span>
+								<span className='header-list_link header-list_link_login'> sign in / join </span>
 							</Link>
 						</div>
 					</div>
