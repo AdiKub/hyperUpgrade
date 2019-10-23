@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { reduxForm } from 'redux-form';
-//import { setPcToCartStart } from '../../store/actions';
+import { loginUserStart, registerStart } from '../../store/actions';
 
 import Login from '../../components/Login';
 import { createValidator, email, required } from '../../services/validations';
@@ -24,8 +24,9 @@ const mapStateToProps = store => ({
   cart: store.pcCart.pcCart,
 });
 
-// const mapDispatchToProps = dispatch => ({
-//   setPcToCartStartAction: () => dispatch(setPcToCartStart()),
-// });
+const mapDispatchToProps = dispatch => ({
+  loginUserStartAction: (requestParams) => dispatch(loginUserStart(requestParams)),
+  registerStartAction: (requestParams) => dispatch(registerStart(requestParams)),
+});
 
-export default connect(mapStateToProps, null)(reduxForm(formConfig)(LoginContainer));
+export default connect(mapStateToProps, mapDispatchToProps)(reduxForm(formConfig)(LoginContainer));

@@ -16,7 +16,6 @@
   }
 
   &-form {
-    
 
     &_title {
       display: flex;
@@ -29,10 +28,11 @@
         display: flex;
         justify-content: center;
         border: 1px solid $genLineCol;
-        color: #959595;
+        color: #5d5d5d;
 
         &__activate {
           border: none;
+          font-weight: 900;
           color: $genTextCol;
           background-color: $genLineCol; 
         }
@@ -49,7 +49,6 @@
       height: auto;
       display: flex;
       flex-direction: column;
-
     }
 
     &__input {
@@ -58,7 +57,6 @@
       width: 200px;
       height: 30px;
       border-bottom: 1px solid gray;
-
     }
 
     &__button {

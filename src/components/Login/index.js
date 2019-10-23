@@ -5,40 +5,43 @@ import customInputField from '../CustomFields';
 import './styles.scss';
 
 const Login = (props) => {
-  const { handleSubmit, pristine, submitting } = props;
-  const [joinBool, setJoinBool] = useState(true)
+  const { 
+    handleSubmit, 
+    pristine, 
+    submitting,
+    loginUserStartAction 
+  } = props;
+  const [joinBool, setJoinBool] = useState(false)
 
 
   const onSubmitHandle = (formValues) => {
     console.log(formValues, 'sdfasd');
+    loginUserStartAction(formValues)
   };
 
   return (
     <div className='login'>
       <div className='container'>
         <div className='login-wrapper'>
-
           <div className='login-form_title'>
+            <button
+              onClick={() => joinBool && setJoinBool(!joinBool)}
+              className={!joinBool ?
+                'login-form_title_button login-form_title_button__activate' :
+                'login-form_title_button'} >
+              Log in
+            </button>
             <button
               onClick={() => !joinBool && setJoinBool(!joinBool)}
               className={joinBool ?
                 'login-form_title_button login-form_title_button__activate' :
                 'login-form_title_button'} >
-              Log in
-              </button>
-            <button
-              onClick={() =>  joinBool && setJoinBool(!joinBool)}
-              className={!joinBool ?
-                'login-form_title_button login-form_title_button__activate' :
-                'login-form_title_button'} >
               Join
-              </button>
+            </button>
           </div>
-
           <form className='login-form' onSubmit={handleSubmit(onSubmitHandle)}>
-
-             {!joinBool &&  <div>
-                <div className='login-form-container'>
+            {joinBool && <div>
+              <div className='login-form-container'>
                 <label>First name</label>
                 <Field
                   className='login-form__input'
@@ -58,8 +61,7 @@ const Login = (props) => {
                   placeholder="Last Name"
                 />
               </div>
-             </div> }
-           
+            </div>}
             <div className='login-form-container'>
               <label>Email</label>
               <Field
@@ -82,9 +84,8 @@ const Login = (props) => {
             </div>
             <button className='login-form__button' type="submit" disabled={pristine || submitting}>
               Login
-              </button>
+            </button>
           </form>
-
         </div>
       </div>
     </div>

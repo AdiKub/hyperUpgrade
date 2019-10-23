@@ -30,7 +30,6 @@ export const match = field => (value, data) => data && value !== data[field] && 
 
 
 export const createValidator = rules => (data = {}) => {
-  console.log(rules)
   const errors = {};
   Object.keys(rules).forEach((key) => {
     const rule = join([].concat(rules[key]));
