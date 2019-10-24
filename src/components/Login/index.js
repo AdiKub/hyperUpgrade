@@ -95,6 +95,9 @@ const Login = (props) => {
               Login
             </button>
           </form>
+          {!login.responseStatuses.isSuccess && login.responseStatuses.message && 
+            <h4 className='login-status_error'>{login.responseStatuses.message}</h4>
+          }
           </>
          :
             <div className='login-status-wrapper'>

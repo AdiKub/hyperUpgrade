@@ -10,7 +10,7 @@ export const initialState = {
     isSuccess: false,
     isModalOpen: false,
     message: '',
-    title: '',
+    status: '',
   },
 };
 

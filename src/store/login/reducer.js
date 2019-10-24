@@ -14,7 +14,6 @@ export default (state = initialState, action) => {
       };
 
     case actionTypes.REGISTER_SUCCESS:
-      console.log(action.response, 'reducer')
       return {
         ...state,
         token: {
@@ -65,7 +64,7 @@ export default (state = initialState, action) => {
           responseStatuses: {
             isSuccess: false,
             isOpen: true,
-            title: action.responseStatuses.title,
+            status: action.responseStatuses.title,
             message: action.responseStatuses.message,
           },
         };
