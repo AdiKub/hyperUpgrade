@@ -6,12 +6,12 @@ import ProductInteractive from '../../components/ProductInteractive';
 
 const ProductInteractiveContainer = props => <ProductInteractive {...props} />;
 
-// const mapStateToProps = store => ({
-//   cart: store.cart,
-// });
+const mapStateToProps = store => ({
+  isLogined: store.login.isLogined,
+});
 
 const mapDispatchToProps = dispatch => ({
   setPcToCartStartAction: (pc = {}) => dispatch(setPcToCartStart(pc)),
 });
 
-export default connect(null, mapDispatchToProps)(ProductInteractiveContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(ProductInteractiveContainer);

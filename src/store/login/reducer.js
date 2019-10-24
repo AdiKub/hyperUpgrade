@@ -7,46 +7,71 @@ export default (state = initialState, action) => {
       return {
         ...state,
         token: {
-          token: action.response.token,
-        },
-        user: action.response.user,
-      };
-    case actionTypes.REGISTER_SUCCESS:
-      return {
-        ...state,
-        token: {
-          token: action.response.token,
+          token: action.response.access_token,
         },
         user: action.response.user,
         isLogined: true,
       };
+
+    case actionTypes.REGISTER_SUCCESS:
+      console.log(action.response, 'reducer')
+      return {
+        ...state,
+        token: {
+          token: action.response.access_token,
+        },
+        user: action.response.user,
+        isLogined: true,
+      };
+
     case actionTypes.LOGOUT_USER_SUCCESS:
       return {
         ...state,
         token: {
           token: '',
         },
-        isLogined: false,
+        isLogined: true,
       };
+
     case actionTypes.USER_SUCCESS:
       return {
         ...state,
         token: {
-          token: action.response.token,
+          token: action.response.access_token,
         },
         user: action.response.user,
         isLogined: action.response.isLogined,
       };
+
     case actionTypes.SET_LOGINED:
       return {
         ...state,
         isLogined: true,
       };
-    case actionTypes.SET_NOT_LOGINED:
-      return {
-        ...state,
-        isLogined: false,
-      };
+
+      case actionTypes.SET_RESPONSE_SUCCESS_STATUSES:
+        return {
+          ...state,
+          responseStatuses: {
+            isSuccess: true,
+            isOpen: true,
+            title: action.responseStatuses.title,
+            message: action.responseStatuses.message,
+          },
+        };
+      case actionTypes.SET_RESPONSE_FAILURE_STATUSES:
+        return {
+          ...state,
+          responseStatuses: {
+            isSuccess: false,
+            isOpen: true,
+            title: action.responseStatuses.title,
+            message: action.responseStatuses.message,
+          },
+        };
+
+
+
     default:
       return state;
   }

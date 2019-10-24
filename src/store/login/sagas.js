@@ -4,13 +4,12 @@ import {
 import api from '../../services/api';
 import * as actions from './actions';
 import * as actionTypes from './actionTypes';
-import * as mainActions from '../main/actions';
+import * as mainActions from '../actions';
 
 export function* loginUserRequest(requestParams) {
   try {
     const response = yield call(api.POST, '/auth/login', requestParams);
     yield put(actions.loginUserSuccess(response));
-    console.log(response)
     localStorage.setItem('token', response.access_token);
     yield put(mainActions.setResponseSuccessStatuses({
       title: 'success!',
@@ -27,7 +26,7 @@ export function* loginUserRequest(requestParams) {
 
 export function* registerRequest(requestParams) {
   try {
-    const response = yield call(api.POST, 'auth/register', requestParams);
+    const response = yield call(api.POST, '/auth/register', requestParams);
     yield put(actions.registerSuccess(response));
     localStorage.setItem('token', response.access_token);
     yield put(mainActions.setResponseSuccessStatuses({

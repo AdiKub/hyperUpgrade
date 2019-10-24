@@ -61,3 +61,17 @@ export const setNotLogined = isLogined => ({
   type: actionTypes.SET_NOT_LOGINED,
   isLogined,
 });
+
+
+export const setResponseSuccessStatuses = responseStatuses => ({
+  type: actionTypes.SET_RESPONSE_SUCCESS_STATUSES,
+  responseStatuses,
+});
+export const setResponseFailureStatuses = responseStatuses => ({
+  type: actionTypes.SET_RESPONSE_FAILURE_STATUSES,
+  responseStatuses,
+});
+export const setDefaultResponseStatuses = () => ({
+  type: actionTypes.SET_DEFAULT_STATUSES,
+
+});

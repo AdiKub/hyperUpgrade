@@ -6,7 +6,7 @@ import Products from './pages/Products';
 import ProductDetail from './pages/DinamicPages/ProductDetail';
 import Configurator from './pages/Configurator';
 import MyCart from './pages/MyCart';
-import LoginPage from './pages/DinamicPages/LoginPage';
+import LoginPage from './pages/LoginPage';
 
 export function AppRouter() {
   return (

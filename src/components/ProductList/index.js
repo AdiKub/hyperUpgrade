@@ -10,7 +10,7 @@ const ProductList = (props) => {
   
   useEffect(()=>{
     getPcsByCotegoryStartAction(category)
-  },[])
+  },[category, getPcsByCotegoryStartAction])
 
   return (
     <div className='product-list'>

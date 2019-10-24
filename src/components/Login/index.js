@@ -9,20 +9,29 @@ const Login = (props) => {
     handleSubmit, 
     pristine, 
     submitting,
-    loginUserStartAction 
+    loginUserStartAction,
+    registerStartAction,
+    login 
   } = props;
+  
   const [joinBool, setJoinBool] = useState(false)
-
-
+  console.log(login)
   const onSubmitHandle = (formValues) => {
-    console.log(formValues, 'sdfasd');
-    loginUserStartAction(formValues)
+    if (joinBool) {
+      registerStartAction(formValues);
+    } else {
+      const logData = {email: formValues.email, password: formValues.password}
+      loginUserStartAction(logData);
+    }
   };
 
   return (
     <div className='login'>
       <div className='container'>
         <div className='login-wrapper'>
+         
+         {!login.isLogined ?
+          <> 
           <div className='login-form_title'>
             <button
               onClick={() => joinBool && setJoinBool(!joinBool)}
@@ -38,8 +47,8 @@ const Login = (props) => {
                 'login-form_title_button'} >
               Join
             </button>
-          </div>
-          <form className='login-form' onSubmit={handleSubmit(onSubmitHandle)}>
+          </div>         
+         <form className='login-form' onSubmit={handleSubmit(onSubmitHandle)}>
             {joinBool && <div>
               <div className='login-form-container'>
                 <label>First name</label>
@@ -86,6 +95,18 @@ const Login = (props) => {
               Login
             </button>
           </form>
+          </>
+         :
+            <div className='login-status-wrapper'>
+              <h1 className='login-status_user_name'>
+                {login.user.firstName}
+              </h1>
+              <h2 className='login-status_text'>
+                {login.responseStatuses.message}
+              </h2>
+            </div>
+         
+        }
         </div>
       </div>
     </div>

@@ -5,7 +5,7 @@ import { getTotalCount } from '../../services/helpers'
 import './styles.scss';
 
 const Hearder = (props) => {
-	const { pcCart, getPcsByCotegoryStartAction, match } = props;
+	const { pcCart, getPcsByCotegoryStartAction, login } = props;
 	const categoryPCArr = [
 		'inexpensive', 'perfect',
 		'professional', 'powerful'
@@ -49,7 +49,11 @@ const Hearder = (props) => {
 								</div>
 							</Link>
 							<Link to='/login'>
+							{!login.isLogined ? 
 								<span className='header-list_link header-list_link_login'> sign in / join </span>
+								:
+								<span className='header-list_link header-list_link_login'> {login.user.firstName} </span>
+							}
 							</Link>
 						</div>
 					</div>
@@ -57,6 +61,5 @@ const Hearder = (props) => {
 			</div>
 		</div>
 	)
-
 }
 export default Hearder

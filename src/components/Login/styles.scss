@@ -73,4 +73,20 @@
     }
   }
 
+  &-status {
+
+    &-wrapper {
+      @include center;
+    }
+
+    &_user_name {
+      text-transform: uppercase;
+    }
+
+    &_text {
+      color: $genRed;
+    }
+
+  }
+
 }

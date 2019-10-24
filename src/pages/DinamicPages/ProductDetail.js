@@ -17,7 +17,7 @@ const ProductsDetail = (props) => {
   
 	useEffect(()=>{
     getPcDetailStartAction(`${category}?_id=${pcId}`)
-	},[]);
+	},[category, pcId, getPcDetailStartAction]);
 	
 	return (
 		<Fragment>

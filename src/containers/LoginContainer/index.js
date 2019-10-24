@@ -21,7 +21,7 @@ const formConfig = {
 const LoginContainer = props => <Login {...props} />;
 
 const mapStateToProps = store => ({
-  cart: store.pcCart.pcCart,
+  login: store.login,
 });
 
 const mapDispatchToProps = dispatch => ({

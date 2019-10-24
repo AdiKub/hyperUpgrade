@@ -4,10 +4,13 @@ export const initialState = {
   },
   isLogined: false,
   user: {
-    roles: {
-      name: '',
-    },
     username: '',
+  },
+  responseStatuses: {
+    isSuccess: false,
+    isModalOpen: false,
+    message: '',
+    title: '',
   },
 };
 

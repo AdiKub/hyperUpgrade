@@ -7,6 +7,7 @@ const HeaderContainer = props => <Header {...props} />;
 
 const mapStateToProps = store => ({
   pcCart: store.pcCart.pcCart,
+  login: store.login,
 });
 
 const mapDispatchToProps = dispatch => ({
