@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {  getPcsByCotegoryStart } from '../../store/actions';
+import {  getPcsByCotegoryStart, loginUserStart } from '../../store/actions';
 import Header from '../../components/Header';
 
 const HeaderContainer = props => <Header {...props} />;
@@ -12,6 +12,7 @@ const mapStateToProps = store => ({
 
 const mapDispatchToProps = dispatch => ({
   getPcsByCotegoryStartAction: (caterory) => dispatch(getPcsByCotegoryStart(caterory)),
+  loginUserStartAction: (requestParams) => dispatch(loginUserStart(requestParams)),
 });
 
 

@@ -42,19 +42,8 @@ export function* registerRequest(requestParams) {
   }
 }
 
-export function* logoutUserRequest(requestParams) {
-  try {
-    const response = yield call(api.DELETE, 'auth/logout', requestParams);
-    yield put(actions.logoutUserSuccess(response));
-    yield put(mainActions.setResponseSuccessStatuses({
-      message: response.message,
-    }));
-  } catch (responseError) {
-    yield put(actions.logoutUserFailure(responseError));
-    yield put(mainActions.setResponseFailureStatuses({
-      message: responseError.message,
-    }));
-  }
+export function* logoutUserRequest() {
+  yield put(actions.logoutUserSuccess());
 }
 
 export function* userRequest(requestParams) {

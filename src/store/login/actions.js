@@ -26,7 +26,6 @@ export const registerFailure = responseError => ({
   responseError,
 });
 
-
 export const logoutUserStart = () => ({
   type: actionTypes.LOGOUT_USER_START,
 });
@@ -51,17 +50,6 @@ export const userFailure = responseError => ({
   type: actionTypes.USER_FAILURE,
   responseError,
 });
-
-
-export const setLogined = isLogined => ({
-  type: actionTypes.SET_LOGINED,
-  isLogined,
-});
-export const setNotLogined = isLogined => ({
-  type: actionTypes.SET_NOT_LOGINED,
-  isLogined,
-});
-
 
 export const setResponseSuccessStatuses = responseStatuses => ({
   type: actionTypes.SET_RESPONSE_SUCCESS_STATUSES,

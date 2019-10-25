@@ -11,11 +11,11 @@ const Login = (props) => {
     submitting,
     loginUserStartAction,
     registerStartAction,
-    login 
+    login,
+    logoutUserStartAction
   } = props;
   
   const [joinBool, setJoinBool] = useState(false)
-  console.log(login)
   const onSubmitHandle = (formValues) => {
     if (joinBool) {
       registerStartAction(formValues);
@@ -107,8 +107,14 @@ const Login = (props) => {
               <h2 className='login-status_text'>
                 {login.responseStatuses.message}
               </h2>
+              <button
+                onClick={()=> {
+                  logoutUserStartAction()
+                }}
+                className='login_log_out'>
+                log out
+              </button>
             </div>
-         
         }
         </div>
       </div>

@@ -1,16 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import { getTotalCount } from '../../services/helpers'
 import './styles.scss';
 
 const Hearder = (props) => {
-	const { pcCart, getPcsByCotegoryStartAction, login } = props;
+	const { pcCart, getPcsByCotegoryStartAction, login, loginUserStartAction } = props;
 	const categoryPCArr = [
 		'inexpensive', 'perfect',
 		'professional', 'powerful'
 	]
+	const SesStorUser = JSON.parse(sessionStorage.getItem('loginedUser'))
 	
+	useEffect(()=>{
+		if (SesStorUser) {
+			const {email, password} = SesStorUser;
+			loginUserStartAction({email, password})
+		}
+	},[])
+
 	return (
 		<div className='header'>
 			<div className='container'>

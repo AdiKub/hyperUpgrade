@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { reduxForm } from 'redux-form';
-import { loginUserStart, registerStart } from '../../store/actions';
+import { loginUserStart, registerStart, logoutUserStart } from '../../store/actions';
 
 import Login from '../../components/Login';
 import { createValidator, email, required } from '../../services/validations';
@@ -26,7 +26,8 @@ const mapStateToProps = store => ({
 
 const mapDispatchToProps = dispatch => ({
   loginUserStartAction: (requestParams) => dispatch(loginUserStart(requestParams)),
-  registerStartAction: (requestParams) => dispatch(registerStart(requestParams)),
+  registerStartAction: (requestParams) => dispatch(registerStart(requestParams)), 
+  logoutUserStartAction: (requestParams) => dispatch(logoutUserStart(requestParams)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(reduxForm(formConfig)(LoginContainer));

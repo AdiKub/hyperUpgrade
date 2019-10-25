@@ -4,6 +4,7 @@ import * as actionTypes from './actionTypes';
 export default (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.LOGIN_USER_SUCCESS:
+      sessionStorage.setItem('loginedUser', JSON.stringify(action.response.user))
       return {
         ...state,
         token: {
@@ -14,6 +15,7 @@ export default (state = initialState, action) => {
       };
 
     case actionTypes.REGISTER_SUCCESS:
+      sessionStorage.setItem('loginedUser', JSON.stringify(action.response.user))
       return {
         ...state,
         token: {
@@ -24,12 +26,23 @@ export default (state = initialState, action) => {
       };
 
     case actionTypes.LOGOUT_USER_SUCCESS:
+        sessionStorage.removeItem('loginedUser')
+        localStorage.removeItem('token')
       return {
         ...state,
         token: {
           token: '',
         },
-        isLogined: true,
+        isLogined: false,
+        user: {
+          username: '',
+        },
+        responseStatuses: {
+          isSuccess: false,
+          isModalOpen: false,
+          message: '',
+          status: '',
+        },
       };
 
     case actionTypes.USER_SUCCESS:
@@ -68,9 +81,6 @@ export default (state = initialState, action) => {
             message: action.responseStatuses.message,
           },
         };
-
-
-
     default:
       return state;
   }

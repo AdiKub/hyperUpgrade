@@ -93,4 +93,18 @@
 
   }
 
+  &_log_out {
+    margin-top: 10px;
+    height: 50px;
+    width: 200px;
+    border: 1px solid $genRed;
+    border-radius: 5px;
+    color: $genTextCol;
+    font-size: 150%;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
 }
