@@ -16,7 +16,7 @@ const ProductList = (props) => {
     <div className='product-list'>
       <div className='container'>
         <div className='product-list-wrapper'>
-          <h2 className='product-list__title'>gamign computers</h2>
+          <h2 className='product-list__title'>{category} gamign computers</h2>
           <ProductListControlsContainer />
           <div className='product-list-pcs'>
             {cotegoryPCs.length ? cotegoryPCs.map((pc) => (
