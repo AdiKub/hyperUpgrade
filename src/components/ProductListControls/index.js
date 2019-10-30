@@ -13,7 +13,8 @@ const ProductListControls = (props) => {
 		sortParams && getPcsByCotegoryStartAction(
 			`${cotegory}?_sort=${sortParams.sortName}&_order=${sortParams.bool ? 'asc' : 'desc' }`
 		)
-	},[sortParams, getPcsByCotegoryStartAction])
+	},[sortParams, getPcsByCotegoryStartAction]);
+	
 	return (
 			<div className='product-list-controls'>
 				<div className='product-list-controls-sorting'>
