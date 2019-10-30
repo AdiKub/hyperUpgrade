@@ -39,6 +39,12 @@
     }
   }
 
+  &__populars {
+    margin-left: 20px;
+    font-weight: 700;
+    color: $genTextCol;
+  }
+
   &__name {
     text-transform: uppercase;
     font-weight: bold;

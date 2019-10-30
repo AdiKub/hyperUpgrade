@@ -38,7 +38,7 @@ const ProductCard = (props) => {
 									<span > {pc.pc.inStock ? 'in stock' : 'Coming Soon'}  </span>
 								</div>
 								<div className='product-cart-table-header__name product-cart-table__available'>
-									<span > {pc.pc.price.replace(/\D/g, "")} $ </span>
+									<span > {pc.pc.price} $ </span>
 								</div>
 								<div className='product-cart-table-header__name product-cart-table__total'>
 									<div className='product-cart-table-count-wrapper'>

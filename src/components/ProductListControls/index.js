@@ -1,34 +1,60 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSortAmountUpAlt, faSortAmountDownAlt, faSearch } from '@fortawesome/free-solid-svg-icons';
 
 import './styles.scss';
 
-const ProductListControls = () => {
-
+const ProductListControls = (props) => {
+	const { getPcsByCotegoryStartAction } = props;
+	const cotegory = localStorage.getItem('pcCategory')
+	const [sortParams, setsortParams] = useState(false);
+	
+	useEffect(()=>{
+		sortParams && getPcsByCotegoryStartAction(
+			`${cotegory}?_sort=${sortParams.sortName}&_order=${sortParams.bool ? 'asc' : 'desc' }`
+		)
+	},[sortParams, getPcsByCotegoryStartAction])
 	return (
 			<div className='product-list-controls'>
 				<div className='product-list-controls-sorting'>
 					<h4 className='product-list-controls-sorting__name'>sorting by:</h4>
-					<button className='product-list-controls-sorting_button'>
+					<button 
+						onClick={()=> setsortParams({sortName: 'price', bool: !sortParams.bool})}				
+						className='product-list-controls-sorting_button'>
 						price
             <FontAwesomeIcon
 							className="product-list-controls-sorting_icon"
-							icon={faSortAmountUpAlt}
+							icon={
+								sortParams.sortName === 'price' && sortParams.bool ? 
+								faSortAmountDownAlt :
+								faSortAmountUpAlt
+							}
 						/>
 					</button>
-					<button className='product-list-controls-sorting_button'>
-						popular
+					<button
+						onClick={()=> setsortParams({sortName: 'populars', bool: !sortParams.bool})}			 
+						className='product-list-controls-sorting_button'>
+						populars
           <FontAwesomeIcon
 							className="product-list-controls-sorting_icon"
-							icon={faSortAmountDownAlt}
+							icon={
+								sortParams.sortName === 'populars' && sortParams.bool ? 
+								faSortAmountDownAlt :
+								faSortAmountUpAlt
+							}
 						/>
 					</button>
-					<button className='product-list-controls-sorting_button'>
-						ratign
+					<button
+						onClick={()=> setsortParams({sortName: 'rating', bool: !sortParams.bool})}			 
+						className='product-list-controls-sorting_button'>
+						rating
           <FontAwesomeIcon
 							className="product-list-controls-sorting_icon"
-							icon={faSortAmountUpAlt}
+							icon={
+								sortParams.sortName === 'rating' && sortParams.bool ? 
+								faSortAmountDownAlt :
+								faSortAmountUpAlt
+							}
 						/>
 					</button>
 				</div>

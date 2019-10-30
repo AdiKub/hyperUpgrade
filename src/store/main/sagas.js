@@ -6,7 +6,7 @@ import * as actions from './actions';
 import * as actionTypes from './actionTypes';
 
 export function* getPcsByCotegoryRequest(requestParams) {
- 
+
   try {
     const response = yield call(api.GET, '/'+ requestParams)
     yield put(actions.getPcsByCotegorySuccess(response));

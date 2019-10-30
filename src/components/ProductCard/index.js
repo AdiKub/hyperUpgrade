@@ -21,10 +21,11 @@ const ProductCard = (props) => {
 					<FontAwesomeIcon
 						style={{ color: num <= pc.rating && '#ff4848' }}  // set active color for raiting stars
 						key={num}
-						className="product-card-rating__icon"
+						className='product-card-rating__icon'
 						icon={faStar}
 					/>
 				))}
+				<span className='product-card__populars'>( {pc.populars} )</span>
 			</div>
 			<h2 className='product-card__name'> Hyper {pc.pcname} </h2>
 			<ProductInteractiveContainer selectedPc={pc} />

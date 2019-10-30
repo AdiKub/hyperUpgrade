@@ -13,7 +13,7 @@ export function* loginUserRequest(requestParams) {
     localStorage.setItem('token', response.access_token);
     yield put(mainActions.setResponseSuccessStatuses({
       title: 'success!',
-      message: 'Вы вошли в свой аккаунт!',
+      message: 'you successfully logged in!',
     }));
   } catch (responseError) {
     yield put(actions.loginUserFailure(responseError));
@@ -31,7 +31,7 @@ export function* registerRequest(requestParams) {
     localStorage.setItem('token', response.access_token);
     yield put(mainActions.setResponseSuccessStatuses({
       title: 'success!',
-      message: 'Вы успешно зарегистрировались!',
+      message: 'you have been successfully authenticated!',
     }));
   } catch (responseError) {
     yield put(actions.registerFailure(responseError));

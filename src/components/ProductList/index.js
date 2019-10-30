@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 import ProductCard from '../ProductCard'
-import ProductListControls from '../ProductListControls'
+import ProductListControlsContainer from '../../containers/ProductListControlsContainer'
 import './styles.scss';
 
 const ProductList = (props) => {
@@ -17,7 +17,7 @@ const ProductList = (props) => {
       <div className='container'>
         <div className='product-list-wrapper'>
           <h2 className='product-list__title'>gamign computers</h2>
-          <ProductListControls />
+          <ProductListControlsContainer />
           <div className='product-list-pcs'>
             {cotegoryPCs.length ? cotegoryPCs.map((pc) => (
               <div key={pc._id}>
