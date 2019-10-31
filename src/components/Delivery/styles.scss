@@ -3,16 +3,122 @@
 
 
 .delivery {
-  padding-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: $genBackCol;
+  @include componentStyle;
+  padding-top: 80px;
+  color: $genTextCol;
   flex: 1 1 auto;
 
   &-wrapper {
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: space-between;
+    justify-content: center;
   }
+
+  &-form {
+
+    &_title {
+      display: flex;
+      width: 220px;
+      justify-content: space-between;
+
+      &_button{
+        height: 30px;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        border: 1px solid $genLineCol;
+        color: #5d5d5d;
+
+        &__activate {
+          border: none;
+          font-weight: 900;
+          color: $genTextCol;
+          background-color: $genLineCol; 
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    &-container {
+      width: 400px;
+      margin-bottom: 5px;
+      border-bottom: 1px solid $genRed;
+      padding: 10px 0;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__input {
+      font-size: 100%;
+      color: $genTextCol;
+      background-color: #313131;
+      padding-left: 10px;
+      width: 100%;
+      height: 40px;
+      
+    }
+
+    &__button {
+      margin-top: 10px;
+      width: 100%;
+      background-color: $genRed;
+      color: $genTextCol;
+      font-weight: 900;
+      height: 50px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &-status {
+
+    &-wrapper {
+      @include center;
+    }
+
+    &_user_name {
+      text-transform: uppercase;
+    }
+
+    &_text {
+      color: $genRed;
+    }
+
+    &_error {
+      color: $genRed;
+    }
+
+  }
+
+  &_log_out {
+    margin-top: 10px;
+    height: 50px;
+    width: 200px;
+    border: 1px solid $genRed;
+    border-radius: 5px;
+    color: $genTextCol;
+    font-size: 150%;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+  -webkit-box-shadow: inset 0 0 0 50px #313131 !important;
+}
+input:-webkit-autofill {
+  -webkit-text-fill-color: $genTextCol !important;
 }

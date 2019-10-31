@@ -18,12 +18,6 @@ export const maxLength = max => value => !isEmpty(value) && value.length > max &
 
 export const integer = value => value !== undefined && !isInt(value) && 'Must be an integer';
 
-export const phone = value => value !== undefined
-  && (!isInt(value)
-    || value.match(/7\d{10}/g) === null
-    || !(value.match(/\d/g).length === 11))
-  && 'Неверный номер телефона';
-
 export const oneOf = values => value => !isIn(value, values) && `Must be one of: ${values.join(', ')}`;
 
 export const match = field => (value, data) => data && value !== data[field] && 'Must match';
