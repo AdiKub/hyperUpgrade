@@ -97,5 +97,29 @@
         }
       }
     }
+
+    &__summ{
+      justify-content: flex-end;
+      margin-bottom: 30px;
+    }
+
+    &__delivery{
+      display: flex;
+      width: 100%;
+      justify-content: flex-end;
+
+      &_button {
+        right: 20px;
+        height: 40px;
+        background-color: $genRed;
+        width: 160px;
+        color: $genTextCol;
+        text-transform: uppercase;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
   }
 }

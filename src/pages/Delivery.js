@@ -1,18 +1,19 @@
 import React, { Fragment } from 'react';
 
+import DeliveryContainer from '../containers/DeliveryContainer';
 import Footer from '../components/Footer';
 import HeaderContainer from '../containers/HeaderContainer';
-import ProductCartContainer from '../containers/ProductCartContainer';
+
 import '../assets/styles/main.scss';
 
-const MyCart = () => {
+const Delivery = () => {
 	return (
 	<Fragment>
 		<HeaderContainer />
-    <ProductCartContainer />
+    <DeliveryContainer />
 		<Footer />
 	</Fragment>
 	)
 }
 
-export default MyCart;
+export default Delivery;
