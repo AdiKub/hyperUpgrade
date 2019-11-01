@@ -1,7 +1,7 @@
 import React from 'react';
 
 import DeliveryFormContainer from '../../containers/DeliveryFormContainer';
-import DeliveryList from '../DeliveryList';
+//import DeliveryList from '../DeliveryList';
 import './styles.scss';
 
 const Delivery = () => {
@@ -11,7 +11,6 @@ const Delivery = () => {
       <div className='container'>
         <div className='delivery-wrapper'>
           <DeliveryFormContainer />
-          <DeliveryList />
         </div>
       </div>
     </div>

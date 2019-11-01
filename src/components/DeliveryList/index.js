@@ -11,7 +11,7 @@ const DeliveryList = (props) => {
   return (
     <div className='delivery-list'>
       <div>
-        
+              
       </div>
     </div>
   )
