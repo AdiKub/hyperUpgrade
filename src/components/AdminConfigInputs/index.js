@@ -15,7 +15,7 @@ const AdminConfigInputs = (props) => {
     'RAM',
     'SSD',
     'computer cases',
-    'ard disk drive',
+    'Hard disk drive',
     'Power Supplies'
   ];
 
@@ -29,6 +29,16 @@ const AdminConfigInputs = (props) => {
       <div className='container'>
         <div className='admin-config-inputs-wrapper'>
           <form className='admin-config-inputs-form' >
+            <div
+              className='admin-config-inputs-form-container'>
+              <label>PC name</label>
+              <Field
+                className='admin-config-inputs-form__input admin-config-inputs-form__input__name'
+                name='pcname'
+                component={customInputField}
+                type="text"
+              />
+            </div>
             <div
               className='admin-config-inputs-form-container'>
               <label>description</label>
@@ -52,6 +62,40 @@ const AdminConfigInputs = (props) => {
                 />
               </div>
             ))}
+             <div
+              className='admin-config-inputs-form-container'>
+              <label>Price $</label>
+              <Field
+                className='admin-config-inputs-form__input admin-config-inputs-form__input__name'
+                name='price'
+                component={customInputField}
+                type="number"
+              />
+            </div>
+            <div className='admin-config-inputs-form-container'>
+              <label htmlFor="employed">In Stock</label>
+              <Field
+                  className='admin-config-inputs-form__check__box'
+                  name="inStock"
+                  id="inStock"
+                  component="input"
+                  type="checkbox"
+                />
+            </div>
+
+            <div className='admin-config-inputs-form-container'>
+              <label>Category</label>
+              <Field
+                className='admin-config-inputs-form__select'
+                name="category" 
+                component="select">
+                <option />
+                <option value="inexpensive">inexpensive</option>
+                <option value="perfect">perfect</option>
+                <option value="powerful">powerful</option>
+                <option value="professional">professional</option>
+              </Field>
+            </div>
             <button 
               className='admin-config-inputs-form__button'>
               SUBMIT

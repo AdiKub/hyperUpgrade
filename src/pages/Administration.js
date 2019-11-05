@@ -10,8 +10,8 @@ const Administration = () => {
 	return (
 	<Fragment>
 		<HeaderContainer />
+		<AdminImageEditor />	
 		<AdminConfigInputsContainer />
-		<AdminImageEditor />
 		<Footer />
 	</Fragment>
 	)
