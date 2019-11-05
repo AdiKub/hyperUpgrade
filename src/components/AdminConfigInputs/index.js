@@ -2,6 +2,7 @@ import React from 'react';
 import { Field } from 'redux-form';
 
 import customInputField from '../CustomFields';
+import CustomTextArea from '../CustomTextArea';
 import './styles.scss';
 
 const AdminConfigInputs = (props) => {
@@ -28,6 +29,16 @@ const AdminConfigInputs = (props) => {
       <div className='container'>
         <div className='admin-config-inputs-wrapper'>
           <form className='admin-config-inputs-form' >
+            <div
+              className='admin-config-inputs-form-container'>
+              <label>description</label>
+              <Field
+                className='admin-config-inputs-form_textarea'
+                name='description'
+                component={CustomTextArea}
+                type="text"
+              />
+            </div>
             {specNameArray.map((specName) => (
               <div
                 key={specName}
@@ -41,8 +52,9 @@ const AdminConfigInputs = (props) => {
                 />
               </div>
             ))}
-            <button className='admin-config-inputs-form__button'>
-                SUBMIT
+            <button 
+              className='admin-config-inputs-form__button'>
+              SUBMIT
             </button>
           </form>
         </div>
