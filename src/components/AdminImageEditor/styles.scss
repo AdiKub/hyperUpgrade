@@ -1,0 +1,17 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixins';
+
+
+.admin-config-inputs {
+  @include componentStyle;
+  padding-top: 80px;
+  color: $genTextCol;
+  flex: 1 1 auto;
+
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+}

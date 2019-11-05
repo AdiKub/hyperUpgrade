@@ -8,6 +8,7 @@ import Configurator from './pages/Configurator';
 import MyCart from './pages/MyCart';
 import LoginPage from './pages/LoginPage';
 import Delivery from './pages/Delivery';
+import Administration from './pages/Administration';
 
 export function AppRouter() {
   return (
@@ -19,6 +20,7 @@ export function AppRouter() {
       <Route path="/mycart" component={MyCart} />
       <Route path="/login" component={LoginPage} />
       <Route path="/delivery" component={Delivery} />
+      <Route path="/administration" component={Administration} />
     </BrowserRouter>
   );
 };

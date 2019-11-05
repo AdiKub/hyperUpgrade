@@ -1,0 +1,66 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixins';
+
+
+.admin-config-inputs {
+  @include componentStyle;
+  padding-top: 80px;
+  color: $genTextCol;
+  flex: 1 1 auto;
+
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+    &-form {
+  
+      &-container {
+        width: 500px;
+        margin-bottom: 5px;
+        border-bottom: 1px solid $genRed;
+        padding: 10px 0;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+      }
+  
+      &__input {
+        font-size: 100%;
+        color: $genTextCol;
+        background-color: #313131;
+        padding-left: 10px;
+        width: 100%;
+        height: 40px;
+        
+      }
+  
+      &__button {
+        margin-top: 10px;
+        width: 100%;
+        background-color: $genRed;
+        color: $genTextCol;
+        font-weight: 900;
+        height: 50px;
+        margin-bottom: 30px;
+  
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  
+}
+  
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+  box-shadow: inset 0 0 0 50px #313131 !important;
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: $genTextCol !important;
+}
