@@ -19,20 +19,13 @@ const ProductList = (props) => {
           <h2 className='product-list__title'>{category} gamign computers</h2>
           <ProductListControlsContainer />
           <div className='product-list-pcs'>
-            {cotegoryPCs.length ? cotegoryPCs.map((pc) => (
-              <div key={pc._id}>
-                <ProductCard pc={pc} />
-              </div>
-            )) : 
-            <h3 
-              style={{
-                color: 'red', 
-                marginTop: '50px'
-              }}
-              className='product-list__title'>
-              Server error
-            </h3>
-          }
+            {cotegoryPCs.length !== 0 && 
+              cotegoryPCs.map((pc) => (
+                <div key={pc._id}>
+                  <ProductCard pc={pc} />
+                </div>
+              )) 
+            }
           </div>
         </div>
       </div>

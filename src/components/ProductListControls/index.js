@@ -6,61 +6,46 @@ import './styles.scss';
 
 const ProductListControls = (props) => {
 	const { getPcsByCotegoryStartAction } = props;
-	const cotegory = localStorage.getItem('pcCategory')
 	const [sortParams, setsortParams] = useState(false);
+	const cotegory = localStorage.getItem('pcCategory')
+	const sortParamArray = ['price', 'populars', 'rating'];
 	
 	useEffect(()=>{
 		sortParams && getPcsByCotegoryStartAction(
 			`${cotegory}?_sort=${sortParams.sortName}&_order=${sortParams.bool ? 'asc' : 'desc' }`
 		)
 	},[sortParams, getPcsByCotegoryStartAction]);
-	
+
+	const handleChangeListInput = (e)=>{
+		getPcsByCotegoryStartAction(`${cotegory}?q=${e}`) 
+	};
+
 	return (
 			<div className='product-list-controls'>
 				<div className='product-list-controls-sorting'>
 					<h4 className='product-list-controls-sorting__name'>sorting by:</h4>
-					<button 
-						onClick={()=> setsortParams({sortName: 'price', bool: !sortParams.bool})}				
-						className='product-list-controls-sorting_button'>
-						price
-            <FontAwesomeIcon
-							className="product-list-controls-sorting_icon"
-							icon={
-								sortParams.sortName === 'price' && sortParams.bool ? 
-								faSortAmountDownAlt :
-								faSortAmountUpAlt
-							}
-						/>
-					</button>
-					<button
-						onClick={()=> setsortParams({sortName: 'populars', bool: !sortParams.bool})}			 
-						className='product-list-controls-sorting_button'>
-						populars
-          <FontAwesomeIcon
-							className="product-list-controls-sorting_icon"
-							icon={
-								sortParams.sortName === 'populars' && sortParams.bool ? 
-								faSortAmountDownAlt :
-								faSortAmountUpAlt
-							}
-						/>
-					</button>
-					<button
-						onClick={()=> setsortParams({sortName: 'rating', bool: !sortParams.bool})}			 
-						className='product-list-controls-sorting_button'>
-						rating
-          <FontAwesomeIcon
-							className="product-list-controls-sorting_icon"
-							icon={
-								sortParams.sortName === 'rating' && sortParams.bool ? 
-								faSortAmountDownAlt :
-								faSortAmountUpAlt
-							}
-						/>
-					</button>
+					{sortParamArray.map((key)=> (
+						<button
+							key={key} 
+							onClick={()=> setsortParams({sortName: key, bool: !sortParams.bool})}				
+							className='product-list-controls-sorting_button'>
+							{key}
+							<FontAwesomeIcon
+								className="product-list-controls-sorting_icon"
+								icon={
+									sortParams.sortName === key && sortParams.bool ? 
+									faSortAmountDownAlt :
+									faSortAmountUpAlt
+								}
+							/>
+						</button>
+					))}
 				</div>
 				<div className='product-list-controls-search'>
-					<input className='product-list-controls-search_input'></input>
+					<input
+						onChange={(e)=> handleChangeListInput(e.target.value) }
+						className='product-list-controls-search_input'>
+					</input>
 					<FontAwesomeIcon
 						className="product-list-controls-search__icon"
 						icon={faSearch}
