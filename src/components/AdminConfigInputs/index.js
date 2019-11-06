@@ -22,8 +22,6 @@ const AdminConfigInputs = (props) => {
   const onSubmitHandle = () => {
   
   };
-
-
   return (
     <div className='admin-config-inputs'>
       <div className='container'>
