@@ -51,7 +51,20 @@
     } 
     &__product {
       width: 400px;
+
+      &__title {
+        display: flex;
+        align-items: center;
+        color: $genTextCol;
+          
+        &:hover {
+          cursor: pointer;
+        }
+
+      }
+    
     }
+
     &__available {
       width: 100px;
     }
