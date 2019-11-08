@@ -84,7 +84,16 @@
         display: flex;
         width: auto;
       }
-      &__button {
+      &_span {
+        @include flexCenter;
+        width: 25px;
+        height: 25px;
+        margin: 0.5px;
+        background-color: rgb(53, 53, 53);
+        border: 1px solid $genLineCol;
+        color: $genTextCol;
+      }
+      &_button {
         @include flexCenter;
         width: 25px;
         height: 25px;

@@ -57,7 +57,8 @@ const Hearder = (props) => {
 								</div>
 							</Link>
 							<Link to='/login'>
-							{!login.isLogined ? 
+							{!login.isLogined 
+								? 
 								<span className='header-list_link header-list_link_login'> sign in / join </span>
 								:
 								<span className='header-list_link header-list_link_login'> {login.user.firstName} </span>

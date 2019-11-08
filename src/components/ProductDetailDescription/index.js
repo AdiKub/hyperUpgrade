@@ -18,8 +18,12 @@ const ProductDetailDescription = (props) => {
           </div>
           <div className='product-detail-description-info'> 
             <h2 className='product-detail-description-info__title'>HYPER</h2>
-            <h3 className='product-detail-description-info__title'> {selectedPc.pcname} </h3>
-            <p className='product-detail-description-info__text' > {selectedPc.description} </p>
+            <h3 
+              className='product-detail-description-info__title'> 
+              {selectedPc.pcname} </h3>
+            <p 
+              className='product-detail-description-info__text' > 
+              {selectedPc.description} </p>
             <ProductInteractiveContainer selectedPc={selectedPc} />
           </div>
         </div>

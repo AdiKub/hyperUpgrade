@@ -14,11 +14,9 @@ const AdminImageEditor = () => {
       <div className='container'>
         <div className='admin-image-editor-wrapper'>
           <div  className='admin-image-editor-canvas'>
-             <DropZone />     
+            <DropZone />     
 
-            <DesignCanvas  
-              url="https://img5.goodfon.com/wallpaper/big/4/ab/super-sabre-north-american-f-100-super-sabre-sverkhzvukovoi.jpg" 
-            />
+            <DesignCanvas />
           </div>
           <div className='admin-image-editor-controls'>
           </div>

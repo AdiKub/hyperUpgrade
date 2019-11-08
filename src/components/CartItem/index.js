@@ -9,7 +9,9 @@ const CartItem = (props) => {
   const { setPcToCartStartAction, deletePcFromCartStartAction, cartPc } = props;
 
   return (
-    <div key={cartPc.pc._id} className='product-cart-table-items product-cart-table-line'>
+    <div 
+      key={cartPc.pc._id} 
+      className='product-cart-table-items product-cart-table-line'>
       <div className='product-cart-table__card product-cart-table__product'>
         <div >
           <img
@@ -17,7 +19,7 @@ const CartItem = (props) => {
             alt='pc'
             className='product-cart-table__card_img' />
         </div>
-        <h4  className='product-cart-table__card__name'> {cartPc.pc.pcname} </h4>
+        <h4 className='product-cart-table__card__name'> {cartPc.pc.pcname} </h4>
       </div>
       <div className='product-cart-table-header__name product-cart-table__available'>
         <span > {cartPc.pc.inStock ? 'in stock' : 'Coming Soon'}  </span>
@@ -29,11 +31,14 @@ const CartItem = (props) => {
         <div className='product-cart-table-count-wrapper'>
           <button
             onClick={() => deletePcFromCartStartAction(cartPc)}
-            className='product-cart-table-count__button'> - </button>
-          <button className='product-cart-table-count__button'>{cartPc.number}</button>
+            className='product-cart-table-count_button'> - </button>
+          <span 
+            className='product-cart-table-count_span'>
+            {cartPc.number}
+          </span>
           <button
             onClick={() => setPcToCartStartAction(cartPc.pc)}
-            className='product-cart-table-count__button'> + </button>
+            className='product-cart-table-count_button'> + </button>
         </div>
       </div>
 

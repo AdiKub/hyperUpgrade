@@ -22,7 +22,9 @@ const ProductCard = (props) => {
 							<h4 className='product-cart-table-header__name product-cart-table__subtotal'>Subtotal</h4>
 						</div>
 						{cart && cart.map((pc) =>
-							<CartItemContainer key={pc.pc._id} cartPc={pc} /> 
+							<CartItemContainer 
+								key={pc.pc._id} 
+								cartPc={pc} /> 
 						)}
 						<div className='product-cart-table-items product-cart-table-line product-cart-table__summ'>
 							<span className='product-cart-table-header__name product-cart-table__available'>
