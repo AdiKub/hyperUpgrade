@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import 'fabric-webpack'
 
-import DropZone from '../DropZone'
-import DesignCanvas from '../DesignCanvas'
+import DropZoneContainer from '../../containers/DropZoneContainer'
 
 import './styles.scss';
 
@@ -14,9 +13,7 @@ const AdminImageEditor = () => {
       <div className='container'>
         <div className='admin-image-editor-wrapper'>
           <div  className='admin-image-editor-canvas'>
-            <DropZone />     
-
-            <DesignCanvas />
+            <DropZoneContainer />     
           </div>
           <div className='admin-image-editor-controls'>
           </div>

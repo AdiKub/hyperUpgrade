@@ -34,7 +34,7 @@ const CartItem = (props) => {
         <span > {cartPc.pc.inStock ? 'in stock' : 'Coming Soon'}  </span>
       </div>
       <div className='product-cart-table-header__name product-cart-table__available'>
-        <span > {cartPc.pc.price} $ </span>
+        <span > {cartPc.pc.price.replace(/\D/g, "")} $ </span>
       </div>
       <div className='product-cart-table-header__name product-cart-table__total'>
         <div className='product-cart-table-count-wrapper'>
@@ -52,7 +52,7 @@ const CartItem = (props) => {
       </div>
 
       <div className='product-cart-table-header__name product-cart-table__available'>
-        <span > {cartPc.pc.price.replace(/\D/g, "") * cartPc.number} $ </span>
+        <span >{cartPc.pc.price.replace(/\D/g, "") * cartPc.number} $ </span>
       </div>
       <div className='product-cart-table-header__name product-cart-table__available'>
         <FontAwesomeIcon

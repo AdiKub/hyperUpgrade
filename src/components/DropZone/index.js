@@ -5,22 +5,26 @@ import { faImage, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 import './styles.scss';
 
-const DropZone = () => {
-  const [mainImageState, dropMainImage] = useState(null)
+const DropZone = (props) => {
+  const {setMainImageStartAction, mainImage} = props;
+  
+  const onDrop = (file) => {
+    setMainImageStartAction(file)
+  }
 
   return (
     <Dropzone
       multiple={false}
-      noClick={mainImageState ? true : false}
+      noClick={mainImage ? true : false}
       accept="image/*"
-      onDrop={(file) => dropMainImage(file)}>
+      onDrop={(file) => onDrop(file[0])}>
       {({ getRootProps, getInputProps }) => (
         <div
           className='dropzone-image-load dropzone-image-load__logo'
           {...getRootProps()}>
           <span
-            onClick={() => dropMainImage(null)}
-            style={{ display: !mainImageState ? 'none' : 'flex' }}
+            onClick={() => onDrop(null)}
+            style={{ display: mainImage ? 'flex' : 'none' }}
             className='dropzone-image__logo__icon_delet'>
             <FontAwesomeIcon
               className='dropzone-image__files__icon_delet'
@@ -32,16 +36,10 @@ const DropZone = () => {
             className='dropzone__drop__input'
             name="mainImage"
             {...getInputProps()} />
-
-          {mainImageState &&
-            <img
-              src={URL.createObjectURL(mainImageState[0])}
-              alt='logo'
-              className='dropzone-image__logo' />}
-          <FontAwesomeIcon
-            style={{ display: mainImageState ? 'none' : 'flex' }}
-            className='dropzone-image__logo__icon'
-            icon={faImage} />
+            <FontAwesomeIcon
+              style={{ display: mainImage ? 'none' : 'flex' }}
+              className='dropzone-image__logo__icon'
+              icon={faImage} />
         </div>
       )}
     </Dropzone>

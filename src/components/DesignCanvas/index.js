@@ -3,12 +3,12 @@ import React, { useEffect } from 'react'
 
 const DesignCanvas = (props) => {
   const fabric = window.fabric
-  const { url="https://hyperpc.ru/images/product/lumen/_temp/gallery-vinyl/hpc-lumen-vinyl-show-1.jpg" } = props
+  const { url } = props
 
   useEffect(()=>{
     const canvas = new fabric.Canvas(DesignCanvas.c)
    
-    fabric.Image.fromURL(url, img => {
+    fabric.Image(url, img => {
       img.scale(0.3)  
       canvas.add(img)
     })
