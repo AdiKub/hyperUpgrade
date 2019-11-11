@@ -7,7 +7,7 @@ import DropZone from '../../components/DropZone';
 const DropZoneContainer = props => <DropZone {...props} />;
 
 const mapStateToProps = store => ({
-  mainImage: store.jabricImage.mainImage,
+  mainImage: store.jabric.mainImage,
 });
 
 const mapDispatchToProps = dispatch => ({
