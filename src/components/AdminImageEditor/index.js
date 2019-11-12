@@ -2,7 +2,8 @@ import React from 'react';
 import 'fabric-webpack'
 
 import DropZoneContainer from '../../containers/DropZoneContainer';
-import DesignCanvasContainer from '../../containers/DesignCanvasContainer'
+import DesignCanvasContainer from '../../containers/DesignCanvasContainer';
+import AdminImageEditorControlersContainer from '../../containers/AdminImageEditorControlersContainer'
 
 import './styles.scss';
 
@@ -17,6 +18,7 @@ const AdminImageEditor = () => {
             <DesignCanvasContainer />
           </div>
           <div className='admin-image-editor-controls'>
+            <AdminImageEditorControlersContainer />
           </div>
         </div>
       </div>

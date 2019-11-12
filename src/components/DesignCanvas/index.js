@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-
+import { conditionalExpression } from '@babel/types';
 
 const DesignCanvas = (props) => {
   const { file } = props
@@ -10,28 +10,21 @@ const DesignCanvas = (props) => {
   useEffect(()=>{
     if (file) {
       const url = URL.createObjectURL(file)
-      const canvas = new fabric.Canvas('drob-canvas')
-
+      const canvas = new fabric.Canvas('main__fabric__image')
+      
       fabric.Image.fromURL(url, img => {
-        img.scale(0.3)  
+        img.scale(1)  
         canvas.add(img)
       })
-    } else {
-      const elem = document.getElementById('drob-canvas');
-      elem.parentNode.removeChild(elem);
     }
   })
-
+  
   return (
-    
     <canvas
-    
-      id='drob-canvas'
+      id='main__fabric__image'
       width={width}
       height={height}
-    >
-      {console.log(file)}
-    </canvas>
+    />
   )
 }
 
