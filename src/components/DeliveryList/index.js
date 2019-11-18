@@ -1,12 +1,8 @@
 import React from 'react';
-import { Field } from 'redux-form';
 
-import customInputField from '../CustomFields';
 import './styles.scss';
 
-const DeliveryList = (props) => {
-  const { cart } = props;
-
+const DeliveryList = () => {
  
   return (
     <div className='delivery-list'>

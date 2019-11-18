@@ -5,6 +5,7 @@ import { reduxForm } from 'redux-form';
 import AdminConfigInputs from '../../components/AdminConfigInputs';
 import { createValidator, required, integer } from '../../services/validations';
 
+
 const validate = createValidator({
   'graphics card': [required],
   'processor': [required],

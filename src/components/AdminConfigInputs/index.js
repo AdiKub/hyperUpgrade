@@ -5,8 +5,8 @@ import customInputField from '../CustomFields';
 import CustomTextArea from '../CustomTextArea';
 import './styles.scss';
 
-const AdminConfigInputs = (props) => {
-  const { handleSubmit } = props;
+const AdminConfigInputs = () => {
+
   const specNameArray = [
     'graphics card',
     'processor',
@@ -19,9 +19,9 @@ const AdminConfigInputs = (props) => {
     'Power Supplies'
   ];
 
-  const onSubmitHandle = () => {
+  // const onSubmitHandle = () => {
   
-  };
+  // };
   return (
     <div className='admin-config-inputs'>
       <div className='container'>
