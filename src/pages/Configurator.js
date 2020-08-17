@@ -8,7 +8,7 @@ const Configurator = () => {
 	return (
 	<Fragment>
 		<HeaderContainer />
-
+		<div></div>
 		<Footer />
 	</Fragment>
 	)
